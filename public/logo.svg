@@ -1,0 +1,11 @@
+<svg viewBox="0 0 356 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    {/* Red geometric shape */}
+    <path d="M103 41H257V76H199V109H257V144H103V41Z" fill="#c62828"/>
+    <path d="M156 76H199V109H156V76Z" fill="white"/>
+    
+    {/* Company name */}
+    <text x="268" y="100" fontFamily="Arial, sans-serif" fontSize="48" fontWeight="bold" fill="#000000">EL FEDAWIA</text>
+    <text x="268" y="133" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="700" fill="#c62828">MINING & MANUFACTURING</text>
+  </g>
+</svg>
