@@ -39,11 +39,19 @@ export default function Header() {
         isHidden ? "-translate-y-full" : "translate-y-0"
       } ${isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border" : "bg-transparent"}`}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      {/* Reduced vertical padding (py-2) to allow the logo to take more vertical space */}
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <div className="flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-16 h-16 relative">
-              <Image src="/images/logo.png" alt="El Fedawia Co. Logo" fill className="object-contain" />
+          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+            {/* Increased height and width (w-24 h-24 or w-32 h-32) to make logo larger */}
+            <div className="w-24 h-24 md:w-32 md:h-32 relative">
+              <Image 
+                src="/images/logo.png" 
+                alt="El Fedawia Co. Logo" 
+                fill 
+                className="object-contain" 
+                priority // Added priority for faster LCP loading
+              />
             </div>
           </Link>
 
@@ -78,7 +86,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-in fade-in">
+          <div className="md:hidden mt-2 pb-4 border-t border-border pt-4 animate-in fade-in">
             <div className="flex flex-col gap-4">
               {[
                 { href: "/", label: "Home" },

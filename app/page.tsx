@@ -4,7 +4,7 @@ import HeroSection from "@/components/home/hero-section"
 import MissionVisionSection from "@/components/home/mission-vision"
 import SectorsCarousel from "@/components/home/sectors-carousel"
 import WhyChooseSection from "@/components/home/why-choose-section"
-import TeamSection from "@/components/home/team-section"
+/* import TeamSection from "@/components/home/team-section" */
 import CTASection from "@/components/home/cta-section"
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
       <MissionVisionSection className="mt-[-20px]" />
       <SectorsCarousel />
       <WhyChooseSection />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <CTASection />
       <Footer />
     </main>

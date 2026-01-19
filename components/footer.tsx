@@ -62,7 +62,7 @@ export default function Footer() {
                 <Phone size={20} className="text-primary group-hover:scale-110 transition-transform" />
                 <div className="text-sm">
                   <p className="font-semibold">Call Us</p>
-                  <p className="text-xs text-secondary-foreground/70">+20 (0) XXXXX</p>
+                  <p className="text-xs text-secondary-foreground/70">+20 1012595634</p>
                 </div>
               </a>
               <a
@@ -72,7 +72,7 @@ export default function Footer() {
                 <Mail size={20} className="text-primary group-hover:scale-110 transition-transform" />
                 <div className="text-sm">
                   <p className="font-semibold">Email</p>
-                  <p className="text-xs text-secondary-foreground/70 truncate">mariam@elfedawia.com</p>
+                  <p className="text-xs text-secondary-foreground/70 truncate">montaser.mohamed@elfedawia.com</p>
                 </div>
               </a>
               <a
