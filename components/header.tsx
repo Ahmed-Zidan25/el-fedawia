@@ -15,7 +15,7 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
 
-      if (currentScrollY > 120) {
+      if (currentScrollY > 90) {
         if (currentScrollY > lastScrollY) {
           setIsHidden(true)
         } else {
