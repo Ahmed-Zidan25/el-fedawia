@@ -15,7 +15,7 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
 
-      if (currentScrollY > 100) {
+      if (currentScrollY > 120) {
         if (currentScrollY > lastScrollY) {
           setIsHidden(true)
         } else {
@@ -26,7 +26,7 @@ export default function Header() {
       }
 
       setLastScrollY(currentScrollY)
-      setIsScrolled(currentScrollY > 10)
+      setIsScrolled(currentScrollY > 9)
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -44,7 +44,7 @@ export default function Header() {
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
             {/* Increased height and width (w-24 h-24 or w-32 h-32) to make logo larger */}
-            <div className="w-24 h-24 md:w-32 md:h-32 relative">
+            <div className="w-24 h-15 md:w-32 md:h-32 relative">
               <Image 
                 src="/images/logo.png" 
                 alt="El Fedawia Co. Logo" 
