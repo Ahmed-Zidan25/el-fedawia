@@ -43,17 +43,17 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            {/* Increased height and width (w-24 h-24 or w-32 h-32) to make logo larger */}
-            <div className="w-24 h-15 md:w-32 md:h-32 relative">
-              <Image 
-                src="/images/logo.png" 
-                alt="El Fedawia Co. Logo" 
-                fill 
-                className="object-contain" 
-                priority // Added priority for faster LCP loading
-              />
-            </div>
-          </Link>
+  {/* Increased width to w-48 (192px) or w-56 (224px) to accommodate the horizontal text */}
+  <div className="w-40 h-12 md:w-56 md:h-16 relative">
+    <Image 
+      src="/logo.png" // Ensure this matches your public folder exactly
+      alt="El Fedawia Co. Logo" 
+      fill 
+      className="object-contain object-left" 
+      priority 
+    />
+  </div>
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
