@@ -15,7 +15,7 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
 
-      if (currentScrollY > 90) {
+      if (currentScrollY > 70) {
         if (currentScrollY > lastScrollY) {
           setIsHidden(true)
         } else {
@@ -26,7 +26,7 @@ export default function Header() {
       }
 
       setLastScrollY(currentScrollY)
-      setIsScrolled(currentScrollY > 9)
+      setIsScrolled(currentScrollY > 5)
     }
 
     window.addEventListener("scroll", handleScroll)

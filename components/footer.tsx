@@ -55,7 +55,7 @@ export default function Footer() {
             </div>
 
             {/* Quick Contact */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
   <a
     href="tel:+201012595634"
     className="flex items-center gap-3 p-4 bg-secondary-foreground/10 rounded-lg hover:bg-secondary-foreground/20 transition-all group w-full"
