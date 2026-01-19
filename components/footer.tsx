@@ -33,7 +33,7 @@ export default function Footer() {
               <p className="text-secondary-foreground/80 mb-6">
                 Subscribe to get the latest news and industry insights
               </p>
-             <form onSubmit={handleSubscribe} className="flex gap-2">
+             <form onSubmit={handleSubscribe} className="flex gap-3">
   <input
     type="email"
     value={email}
@@ -48,29 +48,29 @@ export default function Footer() {
     disabled={subscribeStatus === "loading"}
     className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all disabled:opacity-50 flex items-center gap-2 whitespace-nowrap"
   >
-    {subscribeStatus === "loading" ? "..." : <Send size={15} />}
+    {subscribeStatus === "loading" ? "..." : <Send size={20} />}
   </button>
 </form>
               {subscribeStatus === "success" && <p className="text-sm text-green-400 mt-2">Thanks for subscribing!</p>}
             </div>
 
             {/* Quick Contact */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <a
-                href="tel:+20123456789"
-                className="flex items-center gap-3 p-3 bg-secondary-foreground/10 rounded-lg hover:bg-secondary-foreground/20 transition-all group"
-              >
-                <Phone size={30} className="text-primary group-hover:scale-110 transition-transform" />
-                <div className="text-sm">
-                  <p className="font-semibold">Call Us</p>
-                  <p className="text-xs text-secondary-foreground/70">+20 1012595634</p>
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <a
+    href="tel:+201012595634"
+    className="flex items-center gap-3 p-4 bg-secondary-foreground/10 rounded-lg hover:bg-secondary-foreground/20 transition-all group w-full"
+  >
+    <Phone size={20} className="text-primary group-hover:scale-110 transition-transform" />
+    <div className="text-sm">
+      <p className="font-semibold">Call Us</p>
+      <p className="text-xs text-secondary-foreground/70">+20 1012595634</p>
+    </div>
               </a>
               <a
                 href="mailto:mariam.rashwan@elfedawia.com"
                 className="flex items-center gap-3 p-3 bg-secondary-foreground/10 rounded-lg hover:bg-secondary-foreground/20 transition-all group"
               >
-                <Mail size={30} className="text-primary group-hover:scale-110 transition-transform" />
+                <Mail size={20} className="text-primary group-hover:scale-110 transition-transform" />
                 <div className="text-sm">
                   <p className="font-semibold">Email</p>
                   <p className="text-xs text-secondary-foreground/70 truncate">montaser.mohamed@elfedawia.com</p>
@@ -82,7 +82,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 bg-secondary-foreground/10 rounded-lg hover:bg-secondary-foreground/20 transition-all group"
               >
-                <MapPin size={30} className="text-primary group-hover:scale-110 transition-transform" />
+                <MapPin size={20} className="text-primary group-hover:scale-110 transition-transform" />
                 <div className="text-sm">
                   <p className="font-semibold">Visit</p>
                   <p className="text-xs text-secondary-foreground/70">Bani-Suef, Egypt</p>
