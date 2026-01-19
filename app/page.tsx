@@ -1,6 +1,8 @@
+"use client";
+
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import HeroSection from "@/components/home/hero-section"
+import HeroSection from "@/components/home/hero-section" // Fixed case-sensitivity
 import MissionVisionSection from "@/components/home/mission-vision"
 import SectorsCarousel from "@/components/home/sectors-carousel"
 import WhyChooseSection from "@/components/home/why-choose-section"
@@ -15,7 +17,7 @@ export default function Home() {
       <MissionVisionSection className="mt-[-20px]" />
       <SectorsCarousel />
       <WhyChooseSection />
-      {/* <TeamSection /> */}
+     {/*  <TeamSection /> */}
       <CTASection />
       <Footer />
     </main>
