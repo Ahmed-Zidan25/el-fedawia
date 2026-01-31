@@ -5,7 +5,15 @@ import MissionVisionSection from "@/components/home/mission-vision"
 import FeaturedProducts from "@/components/home/featured-products"
 import ApplicationsSection from "@/components/home/applications-section"
 import WhyChooseSection from "@/components/home/why-choose-section"
-import TeamSection from "@/components/home/team-section"
+// import TeamSection from "@/components/home/team-section"
+import CaseStudiesSection from "@/components/home/case-studies-section"
+import CertificationsSection from "@/components/home/certifications-section"
+import FAQSection from "@/components/home/faq-section"
+import TestimonialsSection from "@/components/home/testimonials-section"
+import DistributionMap from "@/components/home/distribution-map"
+import CapacityDashboard from "@/components/home/capacity-dashboard"
+import AvailabilityTracker from "@/components/home/availability-tracker"
+import SustainabilitySection from "@/components/home/sustainability-section"
 import CTASection from "@/components/home/cta-section"
 
 export default function Home() {
@@ -17,7 +25,15 @@ export default function Home() {
       <FeaturedProducts />
       <ApplicationsSection />
       <WhyChooseSection />
-      <TeamSection />
+      {/* <TeamSection /> */}
+      <CaseStudiesSection />
+      <CertificationsSection />
+      <TestimonialsSection />
+      <DistributionMap />
+      <CapacityDashboard />
+      <AvailabilityTracker />
+      <SustainabilitySection />
+      <FAQSection />
       <CTASection />
       <Footer />
     </main>
