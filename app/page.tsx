@@ -8,14 +8,14 @@ import FeaturedProducts from "@/components/home/featured-products"
 import ApplicationsSection from "@/components/home/applications-section"
 import WhyChooseSection from "@/components/home/why-choose-section"
 import CaseStudiesSection from "@/components/home/case-studies-section"
-import CertificationsSection from "@/components/home/certifications-section"
+/* import CertificationsSection from "@/components/home/certifications-section" */
 import FAQSection from "@/components/home/faq-section"
-import TestimonialsSection from "@/components/home/testimonials-section"
+/* import TestimonialsSection from "@/components/home/testimonials-section"*/
 import DistributionMap from "@/components/home/distribution-map"
 import CapacityDashboard from "@/components/home/capacity-dashboard"
 import AvailabilityTracker from "@/components/home/availability-tracker"
 import SustainabilitySection from "@/components/home/sustainability-section"
-import SectorsCarousel from "@/components/home/sectors-carousel"
+/* import SectorsCarousel from "@/components/home/sectors-carousel" */
 import CTASection from "@/components/home/cta-section"
 
 export default function Home() {
@@ -28,14 +28,14 @@ export default function Home() {
       <ApplicationsSection />
       <WhyChooseSection />
       <CaseStudiesSection />
-      <CertificationsSection />
-      <TestimonialsSection />
+     {/*  <CertificationsSection /> 
+      <TestimonialsSection />*/}
       <DistributionMap />
       <CapacityDashboard />
       <AvailabilityTracker />
       <SustainabilitySection />
       <FAQSection />
-      <SectorsCarousel />
+      {/* <SectorsCarousel /> */}
       <CTASection />
       <Footer />
     </main>

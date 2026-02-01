@@ -18,27 +18,7 @@ export default function DistributionMap() {
       capacity: "300,000 MT/year",
       coordinates: { x: 50, y: 52 },
     },
-    {
-      type: "Distribution Center",
-      city: "Alexandria",
-      country: "Egypt",
-      capacity: "200,000 MT/year",
-      coordinates: { x: 45, y: 50 },
-    },
-    {
-      type: "Regional Hub",
-      city: "Dubai",
-      country: "UAE",
-      capacity: "150,000 MT/year",
-      coordinates: { x: 58, y: 45 },
-    },
-    {
-      type: "Regional Hub",
-      city: "Singapore",
-      country: "Singapore",
-      capacity: "120,000 MT/year",
-      coordinates: { x: 75, y: 30 },
-    },
+    
   ]
 
   const marketRegions = [
