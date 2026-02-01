@@ -121,4 +121,35 @@ export default function WhyChooseSection() {
             {isVisible && (
               <div className="group relative w-full h-full">
                 <div className={`absolute inset-0 bg-gradient-to-br ${currentFeature.gradient} opacity-20 blur-2xl rounded-3xl`} />
-                <div className="relative w-full h-full bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 md:p-12 flex flex-col justify-center items
+                <div className="relative w-full h-full bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 md:p-12 flex flex-col justify-center items-center text-center">
+                   <div className="p-4 bg-slate-900 rounded-2xl mb-8 mx-auto w-fit">
+                    <Icon size={40} className="text-cyan-300" />
+                  </div>
+                  <h3 className="text-4xl font-bold mb-6 text-white">{currentFeature.title}</h3>
+                  <p className="text-slate-300 text-lg leading-relaxed">{currentFeature.description}</p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <button
+            onClick={handleNext}
+            className="hidden md:flex items-center justify-center w-14 h-14 rounded-full bg-slate-800 border border-purple-500/30 text-purple-400 hover:border-purple-400 transition-all"
+            aria-label="Next"
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
+
+        <div className="flex justify-center gap-3 mt-12">
+          {features.map((feature, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setCurrentIndex(index)
+                setAutoPlay(false)
+              }}
+              className={`transition-all duration-300 rounded-full h-3 ${
+                index === currentIndex ? `w-10 bg-gradient-to-r ${feature.gradient}` : "w-3 bg-slate-600"
+              }`}
+              aria-label={`Go to slide ${
