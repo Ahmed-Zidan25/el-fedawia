@@ -28,7 +28,7 @@ export default function DistributionMap() {
   const freeMapUrl = "https://maps.google.com/maps?q=Cairo,Bani%20Suef&t=&z=7&ie=UTF8&iwloc=&output=embed";
 
   return (
-    <section className="py-24 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+    <section className="py-12 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-bold mb-4">

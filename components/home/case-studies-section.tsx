@@ -49,7 +49,7 @@ export default function CaseStudiesSection() {
   ]
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background via-primary/5 to-background">
+    <section className="py-12 px-4 bg-gradient-to-b from-background via-primary/5 to-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Success Stories</h2>

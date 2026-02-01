@@ -67,7 +67,7 @@ export default function ApplicationsSection() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
 
   return (
-    <section className="py-24 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+    <section className="py-12 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
       <style jsx global>{`
         @keyframes float {
           0% { transform: translateY(0px); }

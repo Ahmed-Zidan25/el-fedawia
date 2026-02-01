@@ -89,7 +89,7 @@ export default function WhyChooseSection() {
   return (
     <section
       id="why-choose"
-      className="py-16 md:py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden"
+      className="py-12 md:py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 -z-10">
