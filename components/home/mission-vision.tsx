@@ -109,3 +109,5 @@ export default function MissionVisionSection() {
         </div>
       </div>
     </section>
+  )
+}
