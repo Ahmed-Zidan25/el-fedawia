@@ -27,7 +27,7 @@ export default function CaseStudiesSection() {
       results: {
         yield: "32%",
         quality: "25%",
-        soil: "pH normalized",
+        soil: "pHn",
       },
       metric: "32% increase in crop yield and improved soil health",
       color: "from-green-500 to-emerald-500",
