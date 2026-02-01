@@ -24,7 +24,7 @@ const featuredProducts = [
     id: 2,
     name: 'Treated Calcium Carbonate',
     subtitle: 'Advanced Coated Grade',
-    image: '/featured-calcium-carbonate-treated.jpg',
+    image: '/featured-calcium-carbonate-treated.png',
     description: 'Surface-treated calcium carbonate with advanced dispersion properties',
     features: [
       'Advanced dispersion coating',
