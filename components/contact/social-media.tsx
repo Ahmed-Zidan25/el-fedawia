@@ -14,14 +14,23 @@ export default function SocialMediaSection() {
     {
       icon: Phone,
       label: "Phone",
+<<<<<<< HEAD
       href: "tel:+20XXXX",
       value: "+20 (0) XXXX XXXX",
+=======
+      href: "tel:+201012595634",
+      value: "+20 1012595634",
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
       bgColor: "from-orange-500/10 to-orange-500/5",
     },
     {
       icon: MessageCircle,
       label: "WhatsApp",
+<<<<<<< HEAD
       href: "https://wa.me/20XXXXXXXXX",
+=======
+      href: "https://wa.me/+201012595634",
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
       value: "Chat with us",
       bgColor: "from-green-500/10 to-green-500/5",
     },

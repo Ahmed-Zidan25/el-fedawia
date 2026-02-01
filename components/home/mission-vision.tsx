@@ -49,14 +49,22 @@ export default function MissionVisionSection() {
             }`}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+<<<<<<< HEAD
             <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl border border-border/50 p-8 md:p-10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl min-h-[480px] flex flex-col">
+=======
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl border border-border/50 p-8 md:p-10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl">
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-primary/20 rounded-lg group-hover:bg-primary/30 transition-colors">
                   <Target size={28} className="text-primary" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold">Our Mission</h3>
               </div>
+<<<<<<< HEAD
               <p className="text-foreground/80 leading-relaxed mb-6 flex-grow">
+=======
+              <p className="text-foreground/80 leading-relaxed mb-6">
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
                 To deliver exceptional quality products and services that meet the evolving needs of global markets
                 while maintaining the highest standards of safety, sustainability, and customer satisfaction.
               </p>
@@ -84,14 +92,22 @@ export default function MissionVisionSection() {
             }`}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+<<<<<<< HEAD
             <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl border border-border/50 p-8 md:p-10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl min-h-[480px] flex flex-col">
+=======
+            <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl border border-border/50 p-8 md:p-10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl">
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-primary/20 rounded-lg group-hover:bg-primary/30 transition-colors">
                   <Sparkles size={28} className="text-primary" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold">Our Vision</h3>
               </div>
+<<<<<<< HEAD
               <p className="text-foreground/80 leading-relaxed mb-6 flex-grow">
+=======
+              <p className="text-foreground/80 leading-relaxed mb-6">
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
                 To be the leading global provider of mining and manufacturing solutions, recognized for our commitment
                 to innovation, sustainability, and industry leadership.
               </p>

@@ -15,8 +15,11 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
 
-      // Navbar hides when scrolling down, shows when scrolling up
+<<<<<<< HEAD
+      if (currentScrollY > 100) {
+=======
       if (currentScrollY > 70) {
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
         if (currentScrollY > lastScrollY) {
           setIsHidden(true)
         } else {
@@ -27,7 +30,11 @@ export default function Header() {
       }
 
       setLastScrollY(currentScrollY)
+<<<<<<< HEAD
+      setIsScrolled(currentScrollY > 10)
+=======
       setIsScrolled(currentScrollY > 5)
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -40,23 +47,31 @@ export default function Header() {
         isHidden ? "-translate-y-full" : "translate-y-0"
       } ${isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border" : "bg-transparent"}`}
     >
+<<<<<<< HEAD
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="flex justify-between items-center">
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <div className="w-16 h-16 relative">
+              <Image src="/images/logo.png" alt="El Fedawia Co. Logo" fill className="object-contain" />
+            </div>
+          </Link>
+=======
       {/* Reduced vertical padding (py-2) to allow the logo to take more vertical space */}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            {/* Increased width to w-48/w-64 to accommodate the horizontal text in the logo.
-              Fixed the small size issue by expanding the container dimensions.
-            */}
-            <div className="w-48 h-12 md:w-64 md:h-20 relative">
-              <Image 
-                src="/logo.png" 
-                alt="El Fedawia Co. Logo" 
-                fill 
-                className="object-contain object-left" 
-                priority 
-              />
-            </div>
-          </Link>
+  {/* Increased width to w-48 (192px) or w-56 (224px) to accommodate the horizontal text */}
+  <div className="w-40 h-12 md:w-56 md:h-16 relative">
+    <Image 
+      src="/logo.png" // Ensure this matches your public folder exactly
+      alt="El Fedawia Co. Logo" 
+      fill 
+      className="object-contain object-left" 
+      priority 
+    />
+  </div>
+</Link>
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -89,7 +104,11 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
+<<<<<<< HEAD
+          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-in fade-in">
+=======
           <div className="md:hidden mt-2 pb-4 border-t border-border pt-4 animate-in fade-in">
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
             <div className="flex flex-col gap-4">
               {[
                 { href: "/", label: "Home" },
@@ -112,4 +131,8 @@ export default function Header() {
       </nav>
     </header>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07

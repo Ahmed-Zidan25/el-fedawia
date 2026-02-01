@@ -1,15 +1,23 @@
 "use client"
 
+<<<<<<< HEAD
 import React from "react"
 
 import { useEffect, useState } from "react"
 import { Zap, CheckCircle, Beaker, ChevronLeft, ChevronRight, Sparkles } from "lucide-react"
+=======
+import { useEffect, useState } from "react"
+import { Zap, CheckCircle, Beaker, ChevronLeft, ChevronRight } from "lucide-react"
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
 
 export default function WhyChooseSection() {
   const [isVisible, setIsVisible] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [autoPlay, setAutoPlay] = useState(true)
+<<<<<<< HEAD
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+=======
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,11 +42,16 @@ export default function WhyChooseSection() {
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % features.length)
+<<<<<<< HEAD
     }, 4500)
+=======
+    }, 6000)
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
 
     return () => clearInterval(interval)
   }, [autoPlay])
 
+<<<<<<< HEAD
   useEffect(() => {
     if (!autoPlay) {
       const timer = setTimeout(() => setAutoPlay(true), 8000)
@@ -54,26 +67,37 @@ export default function WhyChooseSection() {
     })
   }
 
+=======
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
   const features = [
     {
       title: "Advanced Dispersion",
       description:
         "Our coated particles are designed to prevent clumping, ensuring a homogenous mix in hydrophobic environments.",
       icon: Zap,
+<<<<<<< HEAD
       gradient: "from-cyan-500 to-blue-500",
+=======
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
     },
     {
       title: "Stringent Quality Control",
       description:
         "Every batch undergoes rigorous testing for whiteness, moisture content, and micron-level consistency.",
       icon: CheckCircle,
+<<<<<<< HEAD
       gradient: "from-purple-500 to-pink-500",
+=======
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
     },
     {
       title: "Customized Solutions",
       description: "Available in a variety of grades to match your specific production requirements.",
       icon: Beaker,
+<<<<<<< HEAD
       gradient: "from-emerald-500 to-cyan-500",
+=======
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
     },
   ]
 
@@ -93,6 +117,7 @@ export default function WhyChooseSection() {
   return (
     <section
       id="why-choose"
+<<<<<<< HEAD
       className="py-16 md:py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden"
     >
       {/* Animated background elements */}
@@ -123,12 +148,28 @@ export default function WhyChooseSection() {
         </div>
 
         {/* Carousel container */}
+=======
+      className="py-8 md:py-10 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden"
+    >
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance">Why Choose Our Mineral?</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Industry-leading quality with unmatched performance and reliability
+          </p>
+        </div>
+
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
         <div className="flex items-center justify-center gap-4 md:gap-8">
           {/* Previous button */}
           <button
             onClick={handlePrev}
             onMouseEnter={() => setAutoPlay(false)}
             onMouseLeave={() => setAutoPlay(true)}
+<<<<<<< HEAD
             className="hidden md:flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 border border-cyan-500/30 text-cyan-400 hover:border-cyan-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] group"
             aria-label="Previous"
           >
@@ -194,6 +235,32 @@ export default function WhyChooseSection() {
                 </div>
               </div>
             )}
+=======
+            className="hidden md:flex items-center justify-center w-14 h-14 rounded-full border border-primary/30 text-primary hover:bg-primary/10 transition-all duration-300 hover:border-primary/60"
+            aria-label="Previous"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          {/* Carousel card - unified size */}
+          <div className="w-full md:w-[500px] h-[400px]">
+            <div
+              className={`group relative w-full h-full transition-all duration-700 ${
+                isVisible ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+              <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl border border-border/50 p-8 md:p-10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl h-full flex flex-col justify-center items-center text-center">
+                <div className="p-4 bg-primary/20 rounded-lg mb-8 group-hover:bg-primary/30 transition-colors group-hover:scale-110 transform duration-300">
+                  <Icon size={48} className="text-primary" />
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold mb-6 group-hover:text-primary transition-colors">
+                  {currentFeature.title}
+                </h3>
+                <p className="text-foreground/80 leading-relaxed text-lg">{currentFeature.description}</p>
+              </div>
+            </div>
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
           </div>
 
           {/* Next button */}
@@ -201,6 +268,7 @@ export default function WhyChooseSection() {
             onClick={handleNext}
             onMouseEnter={() => setAutoPlay(false)}
             onMouseLeave={() => setAutoPlay(true)}
+<<<<<<< HEAD
             className="hidden md:flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 border border-purple-500/30 text-purple-400 hover:border-purple-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] group"
             aria-label="Next"
           >
@@ -211,12 +279,24 @@ export default function WhyChooseSection() {
         {/* Indicators with auto-scroll animation */}
         <div className="flex justify-center gap-3 mt-12">
           {features.map((feature, index) => (
+=======
+            className="hidden md:flex items-center justify-center w-14 h-14 rounded-full border border-primary/30 text-primary hover:bg-primary/10 transition-all duration-300 hover:border-primary/60"
+            aria-label="Next"
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
+
+        <div className="flex justify-center gap-3 mt-10">
+          {features.map((_, index) => (
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
             <button
               key={index}
               onClick={() => {
                 setCurrentIndex(index)
                 setAutoPlay(false)
               }}
+<<<<<<< HEAD
               className={`transition-all duration-300 rounded-full backdrop-blur-sm relative ${
                 index === currentIndex
                   ? `w-10 h-3 bg-gradient-to-r ${feature.gradient} shadow-[0_0_20px_rgba(34,211,238,0.4)]`
@@ -238,6 +318,17 @@ export default function WhyChooseSection() {
 
         {/* Mobile slide counter */}
         <p className="text-center text-sm text-slate-400 mt-6 md:hidden">
+=======
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentIndex ? "bg-primary w-8" : "bg-primary/30 hover:bg-primary/50"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        <p className="text-center text-sm text-muted-foreground mt-6 md:hidden">
+>>>>>>> 054be50de85ed9acb0a9e77ed4f0da87997feb07
           Slide {currentIndex + 1} of {features.length}
         </p>
       </div>
