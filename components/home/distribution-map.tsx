@@ -1,24 +1,23 @@
 "use client"
 
-import { MapPin, Warehouse } from "lucide-react"
+import { MapPin, Warehouse, Globe2 } from "lucide-react"
 
 export default function DistributionMap() {
   const locations = [
-    {
-      type: "Mining Site",
-      city: "Bani Suef",
-      country: "Egypt",
-      capacity: "500,000 MT/year",
-      coordinates: { x: 48, y: 55 },
-    },
     {
       type: "Processing Plant",
       city: "Cairo",
       country: "Egypt",
       capacity: "300,000 MT/year",
-      coordinates: { x: 50, y: 52 },
+      coordinates: { x: 50, y: 48 }, // Cairo is North
     },
-    
+    {
+      type: "Mining Site",
+      city: "Bani Suef",
+      country: "Egypt",
+      capacity: "500,000 MT/year",
+      coordinates: { x: 49.5, y: 56 }, // Bani Suef is South of Cairo
+    },
   ]
 
   const marketRegions = [
@@ -30,105 +29,95 @@ export default function DistributionMap() {
   ]
 
   return (
-    <section className="py-20 px-4 bg-background">
+    <section className="py-20 px-4 bg-slate-50/50 dark:bg-slate-950/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Global Distribution Network</h2>
-          <p className="text-xl text-muted-foreground">Strategic locations and supply chain excellence</p>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            <Globe2 size={16} />
+            <span>Global Reach</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Strategic Distribution</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Our operations are strategically located to ensure efficient supply chain management and rapid global delivery.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           {/* Map Visualization */}
-          <div className="lg:col-span-2">
-            <div className="bg-card border rounded-xl p-8 h-96 flex flex-col">
-              <h3 className="font-bold text-lg mb-6">Our Global Presence</h3>
-              
-              <div className="flex-1 relative bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg overflow-hidden">
-                {/* Simplified World Map Background */}
-                <div className="absolute inset-0 opacity-20">
-                  <svg viewBox="0 0 100 60" className="w-full h-full">
-                    <path d="M10,20 L20,15 L25,20 L30,18 L35,22" stroke="currentColor" fill="none" vectorEffect="non-scaling-stroke" strokeWidth="0.5" />
-                    <path d="M40,30 L50,25 L55,30 L60,28" stroke="currentColor" fill="none" vectorEffect="non-scaling-stroke" strokeWidth="0.5" />
-                    <path d="M65,35 L75,32 L80,35 L85,33" stroke="currentColor" fill="none" vectorEffect="non-scaling-stroke" strokeWidth="0.5" />
-                  </svg>
-                </div>
-
-                {/* Location Markers */}
-                {locations.map((location, idx) => (
-                  <div
-                    key={idx}
-                    className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
-                    style={{
-                      left: `${location.coordinates.x}%`,
-                      top: `${location.coordinates.y}%`,
-                    }}
-                  >
-                    <div className="flex items-center gap-2 bg-card border border-primary rounded-lg px-3 py-2 whitespace-nowrap shadow-lg">
-                      <MapPin size={16} className="text-primary" />
-                      <div>
-                        <p className="text-xs font-bold">{location.city}</p>
-                        <p className="text-xs text-muted-foreground">{location.type}</p>
-                      </div>
-                    </div>
-                    <div className="absolute w-2 h-2 bg-primary rounded-full left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 animate-pulse" />
-                  </div>
-                ))}
-              </div>
+          <div className="lg:col-span-2 relative aspect-[4/3] bg-slate-200 dark:bg-slate-900 rounded-3xl overflow-hidden border border-border shadow-inner">
+            {/* Natural Map Background Pattern */}
+            <div className="absolute inset-0 opacity-10 pointer-events-none" 
+                 style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} 
+            />
+            
+            {/* Simplified Map Contours/Lines for a "Natural" feel */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-[80%] h-[80%] border-2 border-primary/5 rounded-full scale-[1.5] blur-sm" />
+              <div className="w-[60%] h-[60%] border border-primary/10 rounded-full blur-xs" />
             </div>
-          </div>
 
-          {/* Locations List */}
-          <div className="space-y-4">
-            <h3 className="font-bold text-lg">Operational Locations</h3>
-            <div className="space-y-3">
-              {locations.map((location, idx) => (
-                <div key={idx} className="bg-card border rounded-lg p-4 hover:border-primary/50 transition-all">
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Warehouse size={18} className="text-primary" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-bold text-sm">{location.city}, {location.country}</p>
-                      <p className="text-xs text-muted-foreground">{location.type}</p>
-                      <p className="text-xs text-primary font-semibold mt-1">{location.capacity}</p>
+            {/* Location Pins */}
+            {locations.map((loc, idx) => (
+              <div
+                key={idx}
+                className="absolute transition-all duration-500 hover:z-10 group"
+                style={{ left: `${loc.coordinates.x}%`, top: `${loc.coordinates.y}%` }}
+              >
+                <div className="relative -translate-x-1/2 -translate-y-1/2">
+                  <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping group-hover:animate-none" />
+                  <div className="relative bg-background border-2 border-primary p-2 rounded-full shadow-lg cursor-pointer transform group-hover:scale-110 transition-transform">
+                    {loc.type === "Mining Site" ? (
+                      <MapPin className="w-5 h-5 text-primary" />
+                    ) : (
+                      <Warehouse className="w-5 h-5 text-primary" />
+                    )}
+                  </div>
+                  
+                  {/* Tooltip */}
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-48 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    <div className="bg-popover border border-border rounded-lg shadow-xl p-3 text-sm">
+                      <p className="font-bold text-primary">{loc.city}</p>
+                      <p className="text-xs font-medium mb-1">{loc.type}</p>
+                      <p className="text-xs text-muted-foreground">Capacity: {loc.capacity}</p>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Market Distribution */}
-        <div className="mt-16 bg-card border rounded-xl p-8">
-          <h3 className="font-bold text-lg mb-8">Market Reach by Region</h3>
-          <div className="space-y-6">
-            {marketRegions.map((region, idx) => (
-              <div key={idx}>
-                <div className="flex items-center justify-between mb-2">
-                  <p className="font-semibold">{region.name}</p>
-                  <p className="text-primary font-bold">{region.percentage}%</p>
-                </div>
-                <div className="w-full bg-secondary rounded-full h-3 overflow-hidden">
-                  <div
-                    className={`h-full bg-gradient-to-r ${region.color} transition-all`}
-                    style={{ width: `${region.percentage}%` }}
-                  />
                 </div>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-muted-foreground mb-6">Need local support? Connect with our regional teams</p>
-          <a
-            href="/contact"
-            className="inline-block px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold transition-all"
-          >
-            Find Your Local Team
-          </a>
+          {/* Market Stats Card */}
+          <div className="bg-card border rounded-2xl p-8 shadow-sm h-full">
+            <h3 className="font-bold text-xl mb-6 flex items-center gap-2">
+              Market Distribution
+            </h3>
+            <div className="space-y-6">
+              {marketRegions.map((region, idx) => (
+                <div key={idx} className="group">
+                  <div className="flex items-center justify-between mb-2">
+                    <p className="font-semibold text-sm group-hover:text-primary transition-colors">{region.name}</p>
+                    <p className="text-xs font-mono font-bold text-muted-foreground">{region.percentage}%</p>
+                  </div>
+                  <div className="w-full bg-secondary/50 rounded-full h-2 overflow-hidden">
+                    <div
+                      className={`h-full bg-gradient-to-r ${region.color} transition-all duration-1000 ease-out`}
+                      style={{ width: `${region.percentage}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="mt-10 pt-8 border-t border-border">
+              <p className="text-sm text-muted-foreground mb-4">Our logistics network spans over 40 countries, providing seamless door-to-door delivery.</p>
+              <a
+                href="/contact"
+                className="flex items-center justify-center w-full px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all shadow-md active:scale-95"
+              >
+                Find Local Support
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
