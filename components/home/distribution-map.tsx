@@ -10,7 +10,8 @@ export default function DistributionMap() {
       description: "Our primary processing facility and administrative hub, strategically located for global logistics.",
       capacity: "300,000 MT/year",
       icon: Factory,
-      color: "from-blue-500 to-cyan-400"
+      color: "from-blue-500 to-cyan-400",
+      query: "Cairo, Egypt"
     },
     {
       type: "Mining Site",
@@ -18,14 +19,13 @@ export default function DistributionMap() {
       description: "Rich mineral deposits providing high-purity raw materials for our industrial grade products.",
       capacity: "500,000 MT/year",
       icon: Mountain,
-      color: "from-amber-500 to-orange-400"
+      color: "from-amber-500 to-orange-400",
+      query: "Bani+Suef, Egypt"
     },
   ]
 
-  // Centered between Cairo and Bani Suef
-  const mapCenterLat = 29.5;
-  const mapCenterLng = 31.2;
-  const zoomLevel = 8;
+  // This URL uses the free embedding method that doesn't require an API Key
+  const freeMapUrl = "https://maps.google.com/maps?q=Cairo,Bani%20Suef&t=&z=7&ie=UTF8&iwloc=&output=embed";
 
   return (
     <section className="py-24 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
@@ -49,7 +49,7 @@ export default function DistributionMap() {
               return (
                 <div 
                   key={idx} 
-                  className="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-[2rem] shadow-lg transition-all duration-300 hover:border-primary/50"
+                  className="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-[2rem] shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <div className={`p-3 rounded-2xl bg-gradient-to-br ${loc.color} text-white shadow-lg`}>
@@ -73,7 +73,7 @@ export default function DistributionMap() {
           </div>
 
           {/* Google Maps Iframe Container */}
-          <div className="lg:col-span-8 relative min-h-[500px] lg:min-h-full rounded-[3rem] overflow-hidden border-8 border-white dark:border-slate-900 shadow-2xl bg-slate-200">
+          <div className="lg:col-span-8 relative min-h-[500px] lg:min-h-full rounded-[3.5rem] overflow-hidden border-8 border-white dark:border-slate-900 shadow-2xl bg-slate-200">
             <iframe
               width="100%"
               height="100%"
@@ -81,21 +81,20 @@ export default function DistributionMap() {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              // Using the 'place' mode for Cairo centered view
-              src={`https://www.google.com/maps/embed/v1/view?key=YOUR_GOOGLE_MAPS_API_KEY&center=${mapCenterLat},${mapCenterLng}&zoom=${zoomLevel}&maptype=roadmap`}
+              src={freeMapUrl}
               className="absolute inset-0 dark:invert-[0.9] dark:hue-rotate-180 dark:grayscale-[0.2]"
             ></iframe>
 
             {/* Floating Legend Overlay */}
-            <div className="absolute top-6 right-6 z-10 space-y-2">
+            <div className="absolute top-6 right-6 z-10">
               <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur px-4 py-3 rounded-2xl border border-border shadow-xl">
                 <div className="flex items-center gap-3 mb-2">
-                   <MapPin className="text-blue-500 w-4 h-4" />
-                   <span className="text-xs font-bold uppercase tracking-tighter">Cairo Facility</span>
+                   <div className="w-3 h-3 rounded-full bg-blue-500" />
+                   <span className="text-[10px] font-bold uppercase tracking-tighter">Cairo Plant</span>
                 </div>
                 <div className="flex items-center gap-3">
-                   <MapPin className="text-amber-500 w-4 h-4" />
-                   <span className="text-xs font-bold uppercase tracking-tighter">Bani Suef Mine</span>
+                   <div className="w-3 h-3 rounded-full bg-amber-500" />
+                   <span className="text-[10px] font-bold uppercase tracking-tighter">Bani Suef Mine</span>
                 </div>
               </div>
             </div>
