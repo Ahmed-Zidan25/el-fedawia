@@ -14,8 +14,6 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-
-      // Navbar hides when scrolling down, shows when scrolling up
       if (currentScrollY > 70) {
         if (currentScrollY > lastScrollY) {
           setIsHidden(true)
@@ -25,7 +23,6 @@ export default function Header() {
       } else {
         setIsHidden(false)
       }
-
       setLastScrollY(currentScrollY)
       setIsScrolled(currentScrollY > 5)
     }
@@ -40,13 +37,11 @@ export default function Header() {
         isHidden ? "-translate-y-full" : "translate-y-0"
       } ${isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border" : "bg-transparent"}`}
     >
-      {/* Reduced vertical padding (py-2) to allow the logo to take more vertical space */}
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-        <div className="flex justify-between items-center">
+      {/* Changed max-w-7xl to max-w-full and added px-4 to px-8 to remove the large side gaps */}
+      <nav className="max-w-full mx-auto px-4 sm:px-8 py-2">
+        <div className="flex justify-between items-center w-full">
+          {/* Logo aligned left */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            {/* Increased width to w-48/w-64 to accommodate the horizontal text in the logo.
-              Fixed the small size issue by expanding the container dimensions.
-            */}
             <div className="w-48 h-12 md:w-64 md:h-20 relative">
               <Image 
                 src="/logo.png" 
@@ -58,8 +53,8 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* Menus aligned right */}
+          <div className="hidden md:flex items-center gap-8 ml-auto">
             {[
               { href: "/", label: "Home" },
               { href: "/products", label: "Products" },
@@ -79,7 +74,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors"
+            className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors ml-auto"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
