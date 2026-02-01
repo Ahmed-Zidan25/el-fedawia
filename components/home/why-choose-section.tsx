@@ -152,4 +152,11 @@ export default function WhyChooseSection() {
               className={`transition-all duration-300 rounded-full h-3 ${
                 index === currentIndex ? `w-10 bg-gradient-to-r ${feature.gradient}` : "w-3 bg-slate-600"
               }`}
-              aria-label={`Go to slide ${
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
