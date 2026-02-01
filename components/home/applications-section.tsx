@@ -2,24 +2,73 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Navigation, Pagination } from 'swiper/modules'
-
-// Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import { ArrowRight } from "lucide-react"
 
 const applications = [
-  { id: 1, title: "Agriculture", description: "Super phosphate and mineral fertilizers for enhanced crop growth.", image: "/applications/agriculture-application.jpg", color: "from-green-600/80 to-emerald-900/90" },
-  { id: 2, title: "Ceramics & Tiles", description: "Premium kaolin for ceramic manufacturing and porcelain production.", image: "/applications/ceramics-application.jpg", color: "from-orange-600/80 to-red-900/90" },
-  { id: 3, title: "Construction", description: "Limestone and calcium carbonate for high-strength concrete.", image: "/applications/construction-application.jpg", color: "from-gray-600/80 to-slate-900/90" },
-  { id: 4, title: "Paints & Coatings", description: "Talc and kaolin pigments for industrial and decorative coatings.", image: "/applications/paints-application.jpg", color: "from-rose-600/80 to-pink-900/90" },
-  { id: 5, title: "Plastics & Polymers", description: "Mineral fillers for enhanced plastic and rubber properties.", image: "/applications/plastics-application.jpg", color: "from-blue-600/80 to-indigo-900/90" },
-  { id: 6, title: "Rubber & Tires", description: "Reinforcing fillers for industrial rubber and automotive tires.", image: "/applications/rubber-application.jpg", color: "from-zinc-700/80 to-black/90" },
-  { id: 7, title: "Paper & Pulp", description: "High-whiteness kaolin for premium paper coating and fillers.", image: "/applications/paper-application.jpg", color: "from-sky-500/80 to-blue-800/90" },
-  { id: 8, title: "Glass Manufacturing", description: "Essential mineral components for high-clarity industrial glass.", image: "/applications/glass-application.jpg", color: "from-teal-500/80 to-cyan-900/90" },
+  {
+    id: 1,
+    title: "Agriculture",
+    description: "Super phosphate and mineral fertilizers for enhanced crop growth and soil enrichment",
+    image: "/applications/agriculture-application.jpg",
+    color: "from-green-600 to-emerald-600",
+    delay: "0s",
+  },
+  {
+    id: 2,
+    title: "Ceramics & Tiles",
+    description: "Premium kaolin for ceramic manufacturing, porcelain production, and tile glazing",
+    image: "/applications/ceramics-application.jpg",
+    color: "from-orange-600 to-red-600",
+    delay: "0.2s",
+  },
+  {
+    id: 3,
+    title: "Construction",
+    description: "Limestone and calcium carbonate for concrete, cement, and building materials",
+    image: "/applications/construction-application.jpg",
+    color: "from-gray-600 to-slate-700",
+    delay: "0.4s",
+  },
+  {
+    id: 4,
+    title: "Paints & Coatings",
+    description: "Talc and kaolin pigments for protective, decorative, and industrial coatings",
+    image: "/applications/paints-application.jpg",
+    color: "from-rose-600 to-pink-600",
+    delay: "0.1s",
+  },
+  {
+    id: 5,
+    title: "Plastics & Polymers",
+    description: "Mineral fillers and additives for enhanced plastic and rubber compound properties",
+    image: "/applications/plastics-application.jpg",
+    color: "from-blue-600 to-indigo-600",
+    delay: "0.3s",
+  },
+  {
+    id: 6,
+    title: "Rubber & Tires",
+    description: "Reinforcing fillers for industrial rubber products and high-performance automotive tires",
+    image: "/applications/rubber-application.jpg",
+    color: "from-zinc-700 to-black",
+    delay: "0.5s",
+  },
+  {
+    id: 7,
+    title: "Paper & Pulp",
+    description: "High-whiteness kaolin and calcium carbonate for paper coating and filler applications",
+    image: "/applications/paper-application.jpg",
+    color: "from-sky-500 to-blue-400",
+    delay: "0.2s",
+  },
+  {
+    id: 8,
+    title: "Glass Manufacturing",
+    description: "Essential mineral components for high-clarity container glass and industrial glassware",
+    image: "/applications/glass-application.jpg",
+    color: "from-teal-500 to-cyan-500",
+    delay: "0.4s",
+  },
 ]
 
 export default function ApplicationsSection() {
@@ -27,89 +76,67 @@ export default function ApplicationsSection() {
 
   return (
     <section className="py-24 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Industrial Applications</h2>
-            <p className="text-lg text-muted-foreground">
-              Providing high-purity minerals that serve as the backbone for global manufacturing sectors.
-            </p>
-          </div>
-          
-          {/* Custom Navigation Buttons */}
-          <div className="flex gap-3">
-            <button className="swiper-prev-btn w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-              <ChevronLeft size={24} />
-            </button>
-            <button className="swiper-next-btn w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-              <ChevronRight size={24} />
-            </button>
-          </div>
-        </div>
-
-        <Swiper
-          modules={[Autoplay, Navigation, Pagination]}
-          spaceBetween={24}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
-          navigation={{
-            prevEl: '.swiper-prev-btn',
-            nextEl: '.swiper-next-btn',
-          }}
-          pagination={{ clickable: true, dynamicBullets: true }}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
-          }}
-          className="pb-16 !overflow-visible"
-        >
-          {applications.map((app) => (
-            <SwiperSlide key={app.id}>
-              <div
-                className="group relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-xl cursor-grab active:cursor-grabbing transition-transform duration-500 hover:-translate-y-2"
-                onMouseEnter={() => setHoveredId(app.id)}
-                onMouseLeave={() => setHoveredId(null)}
-              >
-                <Image
-                  src={app.image}
-                  alt={app.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-
-                {/* Aesthetic Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t ${app.color} transition-opacity duration-500`} />
-                
-                <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-                  <h3 className="text-2xl font-bold mb-3">{app.title}</h3>
-                  
-                  <p className={`text-white/80 text-sm leading-relaxed mb-6 transition-all duration-500 ${
-                      hoveredId === app.id ? "opacity-100 max-h-24 translate-y-0" : "opacity-0 max-h-0 translate-y-4"
-                    }`}
-                  >
-                    {app.description}
-                  </p>
-
-                  <div className="flex items-center gap-2 font-bold group-hover:gap-4 transition-all">
-                    <span className="text-xs tracking-widest uppercase">Explore Sector</span>
-                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
       <style jsx global>{`
-        .swiper-pagination-bullet-active {
-          background: hsl(var(--primary)) !important;
-          width: 20px !important;
-          border-radius: 4px !important;
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-12px); }
+          100% { transform: translateY(0px); }
+        }
+        .animate-float {
+          animation: float 5s ease-in-out infinite;
         }
       `}</style>
+
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+            Industrial Applications
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            El Fedawia Co. provides high-purity minerals that serve as the backbone for global manufacturing and agricultural sectors.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {applications.map((app) => (
+            <div
+              key={app.id}
+              className="group relative h-[380px] rounded-[2rem] overflow-hidden shadow-2xl animate-float cursor-pointer"
+              style={{ animationDelay: app.delay }}
+              onMouseEnter={() => setHoveredId(app.id)}
+              onMouseLeave={() => setHoveredId(null)}
+            >
+              <Image
+                src={app.image}
+                alt={app.title}
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+
+              {/* Dynamic Gradient Overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-t ${app.color} opacity-70 group-hover:opacity-90 transition-opacity duration-500`} />
+              
+              <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                <h3 className="text-2xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  {app.title}
+                </h3>
+                
+                <p className={`text-white/90 text-sm leading-relaxed mb-6 transition-all duration-500 ${
+                    hoveredId === app.id ? "opacity-100 max-h-24 translate-y-0" : "opacity-0 max-h-0 translate-y-4"
+                  }`}
+                >
+                  {app.description}
+                </p>
+
+                <div className="flex items-center gap-2 font-bold group-hover:gap-4 transition-all opacity-0 group-hover:opacity-100">
+                  <span className="text-xs tracking-widest uppercase">Learn More</span>
+                  <ArrowRight size={16} />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }
