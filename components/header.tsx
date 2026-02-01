@@ -33,8 +33,12 @@ export default function Header() {
         isHidden ? "-translate-y-full" : "translate-y-0"
       } ${isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border" : "bg-transparent"}`}
     >
-      <nav className="max-w-full mx-auto px-4 sm:px-8 py-2">
+      {/* 1. Changed px-4 to px-2 to move logo closer to the left edge.
+          2. Changed py-2 to py-0 to remove vertical space at the top/bottom of the bar.
+      */}
+      <nav className="max-w-full mx-auto px-2 sm:px-4 py-0">
         <div className="flex justify-between items-center w-full">
+          {/* Logo Container: object-left ensures the image stays pinned to the left of its box */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
             <div className="w-48 h-12 md:w-64 md:h-20 relative">
               <Image 
@@ -47,6 +51,7 @@ export default function Header() {
             </div>
           </Link>
 
+          {/* Menus aligned right */}
           <div className="hidden md:flex items-center gap-8 ml-auto">
             {[
               { href: "/", label: "Home" },
@@ -65,6 +70,7 @@ export default function Header() {
             ))}
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors ml-auto"
             onClick={() => setIsOpen(!isOpen)}
