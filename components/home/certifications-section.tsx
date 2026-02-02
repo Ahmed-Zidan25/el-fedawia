@@ -1,6 +1,6 @@
 "use client"
 
-import { Award, CheckCircle, Shield, Download } from "lucide-react" // Added Download icon
+import { Award, CheckCircle, Shield, Download } from "lucide-react"
 import { useState } from "react"
 
 export default function CertificationsSection() {
@@ -21,23 +21,23 @@ export default function CertificationsSection() {
         "Customer satisfaction monitoring",
       ],
       color: "from-blue-500 to-blue-600",
-      downloadUrl: "/certs/ISO.jpeg" // Added download link path
+      downloadUrl: "/certs/iso-9001.pdf"
     },
     {
-      id: "iso-14001",
-      name: "ISO 14001:2015",
-      category: "Environmental Management",
-      icon: Shield,
-      description: "Certifies our environmental management and sustainable mining practices",
-      details: [
-        "Waste reduction and recycling programs",
-        "Carbon footprint monitoring and reduction",
-        "Water conservation initiatives",
-        "Emission control and air quality standards",
-        "Environmental impact assessments",
-      ],
+      id: "TDS",
+  name: "Technical Data Sheet",
+  category: "Industrial Minerals",
+  icon: "PrecisionManufacturing", 
+  description: "Technical specs for high-purity Calcium Carbonate ($CaCO_3$) by EL FEDAWIA CO. ",
+  details: [
+    "High purity: 99% Min $CaCO_3$ content. ",
+    "Fineness: D97 range from $5~\mu m$ to $35~\mu m$. ",
+    "Optics: Whiteness up to 98.5% and Brightness to 96.5%. ",
+    "Low moisture: 0.3% Max across all product grades. ",
+    "Standardized: ISO-compliant pH and oil absorption testing. "
+  ],
       color: "from-green-500 to-green-600",
-      downloadUrl: "/certs/TDS.pdf" // Added download link path
+      downloadUrl: "/certs/iso-14001.pdf"
     },
   ]
 
@@ -51,7 +51,6 @@ export default function CertificationsSection() {
           </p>
         </div>
 
-        {/* Certification Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {certifications.map(cert => {
             const Icon = cert.icon
@@ -91,12 +90,12 @@ export default function CertificationsSection() {
                   )}
                 </button>
 
-                {/* Download Button Section */}
+                {/* Updated Download Button Color */}
                 <div className="mt-6 pt-6 border-t border-border/50">
                   <a
                     href={cert.downloadUrl}
                     download
-                    className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-secondary hover:bg-primary hover:text-primary-foreground text-sm font-bold rounded-lg transition-all active:scale-95"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-primary text-primary-foreground text-sm font-bold rounded-xl transition-all hover:bg-primary/90 hover:shadow-lg active:scale-95"
                   >
                     <Download size={18} />
                     Download Certificate
@@ -107,7 +106,7 @@ export default function CertificationsSection() {
           })}
         </div>
 
-        {/* Testing Standards Section */}
+        {/* Quality Control Footer */}
         <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-8">
           <h3 className="text-2xl font-bold mb-6">Stringent Quality Control Testing</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
