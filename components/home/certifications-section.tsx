@@ -16,7 +16,6 @@ const certifications = [
       "Continuous improvement initiatives",
       "Customer satisfaction monitoring",
     ],
-    // Ensure these match your physical filenames exactly
     downloadUrl: "/certs/ISO.jpeg",
   },
   {
@@ -48,7 +47,6 @@ export default function CertificationsSection() {
               key={cert.id}
               className="group relative flex flex-col rounded-[2.5rem] bg-card border border-border p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
             >
-              {/* Header */}
               <div className="flex items-start gap-6 mb-8">
                 <div className="rounded-2xl bg-red-50 dark:bg-red-950/30 p-4 transition-transform duration-500 group-hover:scale-110">
                   <Icon className="h-8 w-8 text-red-600" />
@@ -63,13 +61,11 @@ export default function CertificationsSection() {
                 </div>
               </div>
 
-              {/* Main Content Area - flex-grow ensures matching heights */}
               <div className="flex-grow space-y-8">
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   {cert.description}
                 </p>
 
-                {/* Details List - Permanently Visible */}
                 <div className="pt-8 border-t border-border">
                   <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-5">
                     Key Specifications & Requirements
@@ -85,14 +81,10 @@ export default function CertificationsSection() {
                 </div>
               </div>
 
-              {/* Download Action */}
               <div className="mt-10">
                 <a
                   href={cert.downloadUrl}
                   download
-                  // target="_blank" and rel="noopener" help if the browser blocks direct downloads
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 w-full rounded-2xl bg-red-600 px-8 py-5 font-bold text-white transition-all hover:bg-red-700 active:scale-95 shadow-xl shadow-red-600/20"
                 >
                   <Download size={22} />
