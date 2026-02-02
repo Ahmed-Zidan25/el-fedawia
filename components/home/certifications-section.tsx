@@ -21,7 +21,7 @@ export default function CertificationsSection() {
         "Customer satisfaction monitoring",
       ],
       color: "from-blue-500 to-blue-600",
-      downloadUrl: "/certs/iso-9001.pdf" // Added download link path
+      downloadUrl: "/certs/ISO.jpeg" // Added download link path
     },
     {
       id: "iso-14001",
@@ -37,7 +37,7 @@ export default function CertificationsSection() {
         "Environmental impact assessments",
       ],
       color: "from-green-500 to-green-600",
-      downloadUrl: "/certs/iso-14001.pdf" // Added download link path
+      downloadUrl: "/certs/TDS.pdf" // Added download link path
     },
   ]
 
