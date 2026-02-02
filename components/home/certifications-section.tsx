@@ -4,7 +4,7 @@ import { Award, CheckCircle, Download, FileText } from "lucide-react"
 import { useState } from "react"
 
 export default function CertificationsSection() {
-  // ISO 9001 is expanded by default to show users they can interact with the cards
+  // We keep the state logic, but we will ensure description text is ALWAYS visible
   const [expandedCert, setExpandedCert] = useState<string | null>("iso-9001")
 
   const certifications = [
@@ -25,7 +25,7 @@ export default function CertificationsSection() {
       downloadUrl: "/certs/ISO.jpeg" 
     },
     {
-      id: "iso-14001", // Re-using ID logic for consistency
+      id: "iso-14001",
       name: "Technical Data Sheet",
       category: "Industrial Minerals",
       icon: FileText,
@@ -60,12 +60,12 @@ export default function CertificationsSection() {
             return (
               <div
                 key={cert.id}
+                // FIXED: Removed 'ring-primary/10' to get rid of the pale red frame
                 className={`group bg-card border border-border rounded-[2rem] p-8 transition-all duration-500 flex flex-col hover:shadow-2xl hover:-translate-y-2 ${
-                  isExpanded ? "ring-2 ring-primary/10 shadow-lg" : "shadow-md"
+                  isExpanded ? "shadow-xl border-slate-200" : "shadow-md"
                 }`}
               >
                 <div className="flex-grow">
-                  {/* Icon with hover scale matching other sections */}
                   <div className={`bg-gradient-to-r ${cert.color} w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-500 group-hover:scale-110`}>
                     <Icon className="text-white" size={28} />
                   </div>
@@ -76,9 +76,13 @@ export default function CertificationsSection() {
                   >
                     <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{cert.name}</h3>
                     <p className="text-sm text-primary font-bold uppercase tracking-wider mb-4">{cert.category}</p>
-                    <p className="text-muted-foreground leading-relaxed mb-6">{cert.description}</p>
+                    
+                    {/* FIXED: Description is now OUTSIDE the overflow-hidden div so it never disappears */}
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      {cert.description}
+                    </p>
 
-                    {/* Expansion Logic: Ensuring content exists for both cards */}
+                    {/* ONLY the Requirements list expands/collapses */}
                     <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
                       isExpanded ? "max-h-[500px] opacity-100 mb-6" : "max-h-0 opacity-0"
                     }`}>
@@ -97,7 +101,6 @@ export default function CertificationsSection() {
                   </button>
                 </div>
 
-                {/* Standardized Download Button */}
                 <div className="mt-auto">
                   <a
                     href={cert.downloadUrl}
