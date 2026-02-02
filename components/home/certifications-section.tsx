@@ -16,6 +16,7 @@ const certifications = [
       "Continuous improvement initiatives",
       "Customer satisfaction monitoring",
     ],
+    // Ensure these match your physical filenames exactly
     downloadUrl: "/certs/ISO.jpeg",
   },
   {
@@ -62,13 +63,13 @@ export default function CertificationsSection() {
                 </div>
               </div>
 
-              {/* Main Content Area */}
+              {/* Main Content Area - flex-grow ensures matching heights */}
               <div className="flex-grow space-y-8">
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   {cert.description}
                 </p>
 
-                {/* Details List - NOW PERMANENTLY VISIBLE */}
+                {/* Details List - Permanently Visible */}
                 <div className="pt-8 border-t border-border">
                   <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-5">
                     Key Specifications & Requirements
@@ -77,7 +78,7 @@ export default function CertificationsSection() {
                     {cert.details.map((item, index) => (
                       <li key={index} className="flex items-start gap-3 text-sm font-medium text-foreground/90">
                         <CheckCircle2 className="h-5 w-5 text-red-600 shrink-0" />
-                        {item}
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -89,6 +90,9 @@ export default function CertificationsSection() {
                 <a
                   href={cert.downloadUrl}
                   download
+                  // target="_blank" and rel="noopener" help if the browser blocks direct downloads
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 w-full rounded-2xl bg-red-600 px-8 py-5 font-bold text-white transition-all hover:bg-red-700 active:scale-95 shadow-xl shadow-red-600/20"
                 >
                   <Download size={22} />
