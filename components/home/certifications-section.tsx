@@ -21,6 +21,7 @@ export default function CertificationsSection() {
         "Customer satisfaction monitoring",
       ],
       color: "from-blue-500 to-blue-600",
+      // Link to public/certs/ISO.jpeg
       downloadUrl: "/certs/ISO.jpeg" 
     },
     {
@@ -37,6 +38,7 @@ export default function CertificationsSection() {
         "Safety and handling instructions",
       ],
       color: "from-green-500 to-green-600",
+      // Link to public/certs/TDS.pdf
       downloadUrl: "/certs/TDS.pdf"
     },
   ]
@@ -59,7 +61,7 @@ export default function CertificationsSection() {
             return (
               <div
                 key={cert.id}
-                // REMOVED: ring-primary/10 (the pale red frame)
+                // FIXED: Removed the 'ring-primary' logic that caused the red frame
                 className={`group bg-card border border-border rounded-[2rem] p-8 transition-all duration-500 flex flex-col hover:shadow-2xl hover:-translate-y-2 ${
                   isExpanded ? "shadow-xl border-slate-200" : "shadow-md"
                 }`}
@@ -73,12 +75,13 @@ export default function CertificationsSection() {
                     onClick={() => setExpandedCert(isExpanded ? null : cert.id)}
                     className="w-full text-left focus:outline-none"
                   >
-                    {/* These items are now outside the hidden container so they never disappear */}
                     <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{cert.name}</h3>
                     <p className="text-sm text-primary font-bold uppercase tracking-wider mb-4">{cert.category}</p>
+                    
+                    {/* Description is now always visible on both cards */}
                     <p className="text-muted-foreground leading-relaxed mb-6">{cert.description}</p>
 
-                    {/* ONLY the Requirements list expands/collapses */}
+                    {/* Only the list of details expands/collapses */}
                     <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
                       isExpanded ? "max-h-[500px] opacity-100 mb-6" : "max-h-0 opacity-0"
                     }`}>
@@ -97,7 +100,7 @@ export default function CertificationsSection() {
                   </button>
                 </div>
 
-                <div className="mt-auto">
+                <div className="mt-auto pt-6">
                   <a
                     href={cert.downloadUrl}
                     download
@@ -112,7 +115,7 @@ export default function CertificationsSection() {
           })}
         </div>
 
-        {/* Static Testing Standards Footer */}
+        {/* Quality Standards Footer matching the distribution map style */}
         <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-[2rem] p-10">
           <h3 className="text-2xl font-bold mb-8">Stringent Quality Control Testing</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
