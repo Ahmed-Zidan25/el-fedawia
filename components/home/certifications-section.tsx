@@ -24,11 +24,11 @@ export default function CertificationsSection() {
       downloadUrl: "/certs/ISO.jpeg" 
     },
     {
-      id: "iso-14001",
+      id: "TDS",
       name: "Technical Data Sheet",
       category: "Industrial Minerals",
       icon: FileText,
-      description: "Technical specs for high-purity Calcium Carbonate ($CaCO_3$) by EL FEDAWIA CO.",
+      description: "Technical specs for high-purity Calcium Carbonate (CaCO3) by EL FEDAWIA CO.",
       details: [
         "Chemical purity analysis",
         "Particle size distribution charts",
