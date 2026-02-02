@@ -1,7 +1,8 @@
 "use client"
 
-import { Award, CheckCircle, Shield, Download } from "lucide-react" // Added Download icon
+import { Award, CheckCircle, Shield, Zap } from "lucide-react"
 import { useState } from "react"
+
 
 export default function CertificationsSection() {
   const [expandedCert, setExpandedCert] = useState<string | null>("iso-9001")
@@ -21,7 +22,7 @@ export default function CertificationsSection() {
         "Customer satisfaction monitoring",
       ],
       color: "from-blue-500 to-blue-600",
-      downloadUrl: "/certs/iso-9001.pdf" // Added download link path
+      
     },
     {
       id: "iso-14001",
@@ -37,8 +38,8 @@ export default function CertificationsSection() {
         "Environmental impact assessments",
       ],
       color: "from-green-500 to-green-600",
-      downloadUrl: "/certs/iso-14001.pdf" // Added download link path
     },
+    
   ]
 
   return (
@@ -58,26 +59,24 @@ export default function CertificationsSection() {
             const isExpanded = expandedCert === cert.id
 
             return (
-              <div
+              <button
                 key={cert.id}
-                className={`bg-card border-2 rounded-xl p-6 transition-all duration-300 flex flex-col ${
-                  isExpanded ? "border-primary shadow-lg" : "border-border"
-                }`}
+                onClick={() => setExpandedCert(isExpanded ? null : cert.id)}
+                className="text-left"
               >
-                <button
-                  onClick={() => setExpandedCert(isExpanded ? null : cert.id)}
-                  className="text-left flex-grow"
-                >
+                <div className={`bg-card border-2 rounded-xl p-6 transition-all duration-300 cursor-pointer hover:shadow-lg min-h-[420px] flex flex-col ${
+                  isExpanded ? "border-primary shadow-lg" : "border-border hover:border-primary/50"
+                }`}>
                   <div className={`bg-gradient-to-r ${cert.color} w-12 h-12 rounded-lg flex items-center justify-center mb-4`}>
                     <Icon className="text-white" size={24} />
                   </div>
 
                   <h3 className="text-xl font-bold mb-2">{cert.name}</h3>
                   <p className="text-sm text-primary font-semibold mb-2">{cert.category}</p>
-                  <p className="text-muted-foreground mb-4">{cert.description}</p>
+                  <p className="text-muted-foreground mb-4 flex-grow">{cert.description}</p>
 
                   {isExpanded && (
-                    <div className="mt-6 pt-6 border-t space-y-3 animate-in fade-in slide-in-from-top-2">
+                    <div className="mt-6 pt-6 border-t space-y-3">
                       <p className="font-semibold text-sm text-muted-foreground uppercase tracking-wide">Key Requirements:</p>
                       <ul className="space-y-2">
                         {cert.details.map((detail, idx) => (
@@ -89,20 +88,12 @@ export default function CertificationsSection() {
                       </ul>
                     </div>
                   )}
-                </button>
 
-                {/* Download Button Section */}
-                <div className="mt-6 pt-6 border-t border-border/50">
-                  <a
-                    href={cert.downloadUrl}
-                    download
-                    className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-secondary hover:bg-primary hover:text-primary-foreground text-sm font-bold rounded-lg transition-all active:scale-95"
-                  >
-                    <Download size={18} />
-                    Download Certificate
-                  </a>
+                  <p className="text-xs text-muted-foreground mt-auto pt-4">
+                    {isExpanded ? "Click to collapse" : "Click to learn more"}
+                  </p>
                 </div>
-              </div>
+              </button>
             )
           })}
         </div>
