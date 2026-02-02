@@ -4,7 +4,6 @@ import { Award, CheckCircle, Download, FileText } from "lucide-react"
 import { useState } from "react"
 
 export default function CertificationsSection() {
-  // We keep the state logic, but we will ensure description text is ALWAYS visible
   const [expandedCert, setExpandedCert] = useState<string | null>("iso-9001")
 
   const certifications = [
@@ -60,7 +59,7 @@ export default function CertificationsSection() {
             return (
               <div
                 key={cert.id}
-                // FIXED: Removed 'ring-primary/10' to get rid of the pale red frame
+                // REMOVED: ring-primary/10 (the pale red frame)
                 className={`group bg-card border border-border rounded-[2rem] p-8 transition-all duration-500 flex flex-col hover:shadow-2xl hover:-translate-y-2 ${
                   isExpanded ? "shadow-xl border-slate-200" : "shadow-md"
                 }`}
@@ -74,13 +73,10 @@ export default function CertificationsSection() {
                     onClick={() => setExpandedCert(isExpanded ? null : cert.id)}
                     className="w-full text-left focus:outline-none"
                   >
+                    {/* These items are now outside the hidden container so they never disappear */}
                     <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{cert.name}</h3>
                     <p className="text-sm text-primary font-bold uppercase tracking-wider mb-4">{cert.category}</p>
-                    
-                    {/* FIXED: Description is now OUTSIDE the overflow-hidden div so it never disappears */}
-                    <p className="text-muted-foreground leading-relaxed mb-6">
-                      {cert.description}
-                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-6">{cert.description}</p>
 
                     {/* ONLY the Requirements list expands/collapses */}
                     <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
