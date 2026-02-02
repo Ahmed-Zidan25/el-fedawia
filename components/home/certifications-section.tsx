@@ -16,7 +16,7 @@ const certifications = [
       "Continuous improvement initiatives",
       "Customer satisfaction monitoring",
     ],
-    downloadUrl: "/certs/ISO.jpeg",
+    downloadUrl: "https://drive.google.com/file/d/1zLxaVBGvwJnkiYG5HrtNC87EkWzYwq1m/view?usp=sharing",
   },
   {
     id: "tds",
@@ -31,7 +31,7 @@ const certifications = [
       "Application guidelines",
       "Storage and handling instructions",
     ],
-    downloadUrl: "/certs/TDS.pdf",
+    downloadUrl: "https://drive.google.com/file/d/1KxbTE11WqXFz8JTSj012VDbU1n4nUtDQ/view?usp=sharing",
   },
 ];
 
