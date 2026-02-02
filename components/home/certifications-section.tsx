@@ -1,10 +1,10 @@
 "use client"
 
-import { Award, CheckCircle, Shield, Download, FileText } from "lucide-react"
+import { Award, CheckCircle, Download, FileText } from "lucide-react"
 import { useState } from "react"
 
 export default function CertificationsSection() {
-  // Keeping ISO 9001 expanded by default as per your previous preference
+  // ISO 9001 is expanded by default to show users they can interact with the cards
   const [expandedCert, setExpandedCert] = useState<string | null>("iso-9001")
 
   const certifications = [
@@ -13,7 +13,7 @@ export default function CertificationsSection() {
       name: "ISO 9001:2015",
       category: "Quality Management",
       icon: Award,
-      description: "Demonstrates our commitment to quality management systems and continuous improvement",
+      description: "Demonstrates our commitment to quality management systems and continuous improvement.",
       details: [
         "Rigorous testing procedures for all batches",
         "Documented quality control processes",
@@ -25,7 +25,7 @@ export default function CertificationsSection() {
       downloadUrl: "/certs/ISO.jpeg" 
     },
     {
-      id: "iso-14001",
+      id: "iso-14001", // Re-using ID logic for consistency
       name: "Technical Data Sheet",
       category: "Industrial Minerals",
       icon: FileText,
@@ -61,37 +61,44 @@ export default function CertificationsSection() {
               <div
                 key={cert.id}
                 className={`group bg-card border border-border rounded-[2rem] p-8 transition-all duration-500 flex flex-col hover:shadow-2xl hover:-translate-y-2 ${
-                  isExpanded ? "ring-2 ring-primary/20 shadow-lg" : "shadow-md"
+                  isExpanded ? "ring-2 ring-primary/10 shadow-lg" : "shadow-md"
                 }`}
               >
-                <button
-                  onClick={() => setExpandedCert(isExpanded ? null : cert.id)}
-                  className="text-left flex-grow"
-                >
-                  <div className={`bg-gradient-to-r ${cert.color} w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-transform group-hover:scale-110`}>
+                <div className="flex-grow">
+                  {/* Icon with hover scale matching other sections */}
+                  <div className={`bg-gradient-to-r ${cert.color} w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-500 group-hover:scale-110`}>
                     <Icon className="text-white" size={28} />
                   </div>
 
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{cert.name}</h3>
-                  <p className="text-sm text-primary font-bold uppercase tracking-wider mb-4">{cert.category}</p>
-                  <p className="text-muted-foreground leading-relaxed mb-6">{cert.description}</p>
+                  <button 
+                    onClick={() => setExpandedCert(isExpanded ? null : cert.id)}
+                    className="w-full text-left focus:outline-none"
+                  >
+                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{cert.name}</h3>
+                    <p className="text-sm text-primary font-bold uppercase tracking-wider mb-4">{cert.category}</p>
+                    <p className="text-muted-foreground leading-relaxed mb-6">{cert.description}</p>
 
-                  <div className={`overflow-hidden transition-all duration-500 ${isExpanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-                    <div className="pt-6 border-t border-border space-y-4">
-                      <p className="font-bold text-xs text-muted-foreground uppercase tracking-widest">Key Requirements:</p>
-                      <ul className="space-y-3">
-                        {cert.details.map((detail, idx) => (
-                          <li key={idx} className="flex gap-3 items-start">
-                            <CheckCircle size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                            <span className="text-sm font-medium">{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    {/* Expansion Logic: Ensuring content exists for both cards */}
+                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                      isExpanded ? "max-h-[500px] opacity-100 mb-6" : "max-h-0 opacity-0"
+                    }`}>
+                      <div className="pt-6 border-t border-border space-y-4">
+                        <p className="font-bold text-xs text-muted-foreground uppercase tracking-widest">Key Requirements:</p>
+                        <ul className="space-y-3">
+                          {cert.details.map((detail, idx) => (
+                            <li key={idx} className="flex gap-3 items-start">
+                              <CheckCircle size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                              <span className="text-sm font-medium">{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
 
-                <div className="mt-8">
+                {/* Standardized Download Button */}
+                <div className="mt-auto">
                   <a
                     href={cert.downloadUrl}
                     download
@@ -106,7 +113,7 @@ export default function CertificationsSection() {
           })}
         </div>
 
-        {/* Testing Standards Section */}
+        {/* Static Testing Standards Footer */}
         <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-[2rem] p-10">
           <h3 className="text-2xl font-bold mb-8">Stringent Quality Control Testing</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
