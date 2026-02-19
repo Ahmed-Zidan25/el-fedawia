@@ -154,12 +154,12 @@ export default function FeaturedProducts() {
                     >
                       Learn More
                     </a>
-                    <a
+                    {/* <a
                       href="/get-quote"
                       className="flex-1 px-4 py-2 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-all text-center text-sm"
                     >
                       Get Quote
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
