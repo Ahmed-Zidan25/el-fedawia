@@ -20,6 +20,7 @@ export default function SocialMediaSection() {
 
       href: "tel:+201012595634",
       value: "+20 1012595634",
+      
 
       bgColor: "from-orange-500/10 to-orange-500/5",
     },

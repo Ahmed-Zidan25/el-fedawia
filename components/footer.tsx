@@ -101,8 +101,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://wa.me/201003539052" className="hover:text-primary transition-colors">
-                  +201003539052 
+                <Link href="https://wa.me/201012595634" className="hover:text-primary transition-colors">
+                  +20 10 12595634
                 </Link>
               </li>
               <li>
