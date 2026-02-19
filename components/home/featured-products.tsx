@@ -53,77 +53,72 @@ const featuredProducts = [
   {
     id: 4,
     name: 'Limestone',
-    subtitle: 'Multi-Grade Selection',
-    image: '/featured-talc-powder.jpg',
-    description: 'Premium talc powder with multiple micron grades for specialized applications',
+    subtitle: 'Industrial Grade',
+    image: '/featured-limestone.jpg',
+    description: 'High-purity sedimentary rock essential for construction and chemical processes',
     features: [
-      'Multiple grade options',
-      'Fine particle distribution',
-      'Stringent quality control',
-      'Micron-level consistency'
+      'High CaCO3 content',
+      'Excellent durability',
+      'Low impurities level',
+      'Customized crushing sizes'
     ],
-   /*  applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'], */
-    color: 'from-amber-50 to-amber-100'
+    color: 'from-slate-50 to-slate-200'
   },
   {
     id: 5,
     name: 'Agricultural Gypsum',
-    subtitle: 'Multi-Grade Selection',
-    image: '/featured-talc-powder.jpg',
-    description: 'Premium talc powder with multiple micron grades for specialized applications',
+    subtitle: 'Soil Conditioner',
+    image: '/featured-gypsum.jpg',
+    description: 'Natural mineral used to improve soil structure and provide essential nutrients',
     features: [
-      'Multiple grade options',
-      'Fine particle distribution',
-      'Stringent quality control',
-      'Micron-level consistency'
+      'Rich in Calcium and Sulfur',
+      'Neutralizes soil salinity',
+      'Improves water infiltration',
+      'Finely ground for easy application'
     ],
-   /*  applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'], */
     color: 'from-amber-50 to-amber-100'
   },
   {
     id: 6,
-    name: 'Rocked Phosphate Powder',
-    subtitle: 'Multi-Grade Selection',
-    image: '/featured-talc-powder.jpg',
-    description: 'Premium talc powder with multiple micron grades for specialized applications',
+    name: 'Rock Phosphate Powder',
+    subtitle: 'Natural Fertilizer',
+    image: '/featured-phosphate.jpg',
+    description: 'Organic phosphorus source for long-term soil fertility and plant growth',
     features: [
-      'Multiple grade options',
-      'Fine particle distribution',
-      'Stringent quality control',
-      'Micron-level consistency'
+      'High P2O5 concentration',
+      'Slow-release nutrient delivery',
+      '100% natural organic source',
+      'Optimized for direct application'
     ],
-    /* applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'], */
-    color: 'from-amber-50 to-amber-100'
+    color: 'from-orange-50 to-orange-100'
   },
   {
     id: 7,
     name: 'Kaolin',
-    subtitle: 'Multi-Grade Selection',
-    image: '/featured-talc-powder.jpg',
-    description: 'Premium talc powder with multiple micron grades for specialized applications',
+    subtitle: 'Refined White Clay',
+    image: '/featured-kaolin.jpg',
+    description: 'Soft white clay widely used in ceramics, paper, and paint industries',
     features: [
-      'Multiple grade options',
-      'Fine particle distribution',
-      'Stringent quality control',
-      'Micron-level consistency'
+      'Exceptional brightness',
+      'Fine plate-like structure',
+      'Chemical inertness',
+      'High thermal resistance'
     ],
-    /* applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'], */
-    color: 'from-amber-50 to-amber-100'
+    color: 'from-gray-50 to-gray-100'
   },
   {
     id: 8,
     name: 'Feldspar',
-    subtitle: 'Multi-Grade Selection',
-    image: '/featured-talc-powder.jpg',
-    description: 'Premium talc powder with multiple micron grades for specialized applications',
+    subtitle: 'Potassium / Sodium Grade',
+    image: '/featured-feldspar.jpg',
+    description: 'Essential fluxing agent for the glass and ceramic manufacturing sectors',
     features: [
-      'Multiple grade options',
-      'Fine particle distribution',
-      'Stringent quality control',
-      'Micron-level consistency'
+      'Alkali-rich composition',
+      'Low iron content',
+      'Consistent melting behavior',
+      'Enhances ceramic durability'
     ],
-    /* applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'], */
-    color: 'from-amber-50 to-amber-100'
+    color: 'from-rose-50 to-rose-100'
   }
 ]
 
