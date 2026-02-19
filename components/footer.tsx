@@ -48,7 +48,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Products</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/featured-products" className="hover:text-primary transition-colors">
+                <Link href="#featured-products" className="hover:text-primary transition-colors">
                   Calcium Carbonate
                 </Link>
               </li>
