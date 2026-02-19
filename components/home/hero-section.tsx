@@ -22,7 +22,7 @@ export default function HeroSection() {
           Excellence in Mining & Manufacturing
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Delivering superior quality phosphate and kaolin products through innovation and sustainable practices.
+          Delivering superior quality calcium carbonate and talc powder products through innovation and sustainable practices.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

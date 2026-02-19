@@ -17,12 +17,12 @@ const featuredProducts = [
       'Consistent particle size',
       'ISO certified quality'
     ],
-    applications: ['Paints & Coatings', 'Plastics', 'Paper Industry', 'Construction'],
+   /*  applications: ['Paints & Coatings', 'Plastics', 'Paper Industry', 'Construction'], */
     color: 'from-blue-50 to-blue-100'
   },
   {
     id: 2,
-    name: 'Treated Calcium Carbonate',
+    name: 'Coated calcium carbonate',
     subtitle: 'Advanced Coated Grade',
     image: '/featured-calcium-carbonate-treated.png',
     description: 'Surface-treated calcium carbonate with advanced dispersion properties',
@@ -32,7 +32,7 @@ const featuredProducts = [
       'Hydrophobic environments compatible',
       'Enhanced consistency'
     ],
-    applications: ['High-Performance Coatings', 'Specialty Chemicals', 'Premium Plastics'],
+    /* applications: ['High-Performance Coatings', 'Specialty Chemicals', 'Premium Plastics'], */
     color: 'from-purple-50 to-purple-100'
   },
   {
@@ -47,7 +47,82 @@ const featuredProducts = [
       'Stringent quality control',
       'Micron-level consistency'
     ],
-    applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'],
+    /* applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'], */
+    color: 'from-amber-50 to-amber-100'
+  },
+  {
+    id: 4,
+    name: 'Limestone',
+    subtitle: 'Multi-Grade Selection',
+    image: '/featured-talc-powder.jpg',
+    description: 'Premium talc powder with multiple micron grades for specialized applications',
+    features: [
+      'Multiple grade options',
+      'Fine particle distribution',
+      'Stringent quality control',
+      'Micron-level consistency'
+    ],
+   /*  applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'], */
+    color: 'from-amber-50 to-amber-100'
+  },
+  {
+    id: 5,
+    name: 'Agricultural Gypsum',
+    subtitle: 'Multi-Grade Selection',
+    image: '/featured-talc-powder.jpg',
+    description: 'Premium talc powder with multiple micron grades for specialized applications',
+    features: [
+      'Multiple grade options',
+      'Fine particle distribution',
+      'Stringent quality control',
+      'Micron-level consistency'
+    ],
+   /*  applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'], */
+    color: 'from-amber-50 to-amber-100'
+  },
+  {
+    id: 6,
+    name: 'Rocked Phosphate Powder',
+    subtitle: 'Multi-Grade Selection',
+    image: '/featured-talc-powder.jpg',
+    description: 'Premium talc powder with multiple micron grades for specialized applications',
+    features: [
+      'Multiple grade options',
+      'Fine particle distribution',
+      'Stringent quality control',
+      'Micron-level consistency'
+    ],
+    /* applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'], */
+    color: 'from-amber-50 to-amber-100'
+  },
+  {
+    id: 7,
+    name: 'Kaolin',
+    subtitle: 'Multi-Grade Selection',
+    image: '/featured-talc-powder.jpg',
+    description: 'Premium talc powder with multiple micron grades for specialized applications',
+    features: [
+      'Multiple grade options',
+      'Fine particle distribution',
+      'Stringent quality control',
+      'Micron-level consistency'
+    ],
+    /* applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'], */
+    color: 'from-amber-50 to-amber-100'
+  },
+  {
+    id: 8,
+    name: 'Feldspar',
+    subtitle: 'Multi-Grade Selection',
+    image: '/featured-talc-powder.jpg',
+    description: 'Premium talc powder with multiple micron grades for specialized applications',
+    features: [
+      'Multiple grade options',
+      'Fine particle distribution',
+      'Stringent quality control',
+      'Micron-level consistency'
+    ],
+    /* applications: ['Ceramics', 'Rubber', 'Cosmetics', 'Industrial Applications'], */
     color: 'from-amber-50 to-amber-100'
   }
 ]
