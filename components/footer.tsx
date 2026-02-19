@@ -83,19 +83,21 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contact Us</h4>
+            <h4 className="font-semibold mb-4">Connect With Us</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Privacy Policy
+                <Link href="https://maps.app.goo.gl/GfAp41eMLD5nEYQF6?g_st=aw" className="hover:text-primary transition-colors">
+                  Our Location 
                 </Link>
               </li>
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
+              
             </ul>
+
+            <p className="text-muted-foreground text-sm">
+               +201003539052
+              <br />
+              montaser@elfedawia.com
+            </p>
           </div>
         </div>
 

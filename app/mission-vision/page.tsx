@@ -32,7 +32,7 @@ export default function MissionVisionSection() {
       <Header />
     <section
       id="mission-vision"
-      className="py-8 md:py-10 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden"
+      className="pt-24 pb-12 md:pt-32 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10" />
