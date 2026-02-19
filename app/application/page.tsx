@@ -67,74 +67,73 @@ const applications = [
 
 export default function ApplicationsSection() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
-<Header />
+
   return (
-    <section className="py-12 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
-      <style jsx global>{`
-        @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-12px); }
-          100% { transform: translateY(0px); }
-        }
-        .animate-float {
-          animation: float 5s ease-in-out infinite;
-        }
-      `}</style>
+    <>
+      <Header />
+      <section className="py-12 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+        <style jsx global>{`
+          @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+          }
+          .animate-float {
+            animation: float 5s ease-in-out infinite;
+          }
+        `}</style>
 
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight text-slate-900 dark:text-white">
-            Industrial Applications
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            El Fedawia Co. provides high-purity minerals that serve as the backbone for global manufacturing and agricultural sectors.
-          </p>
-        </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight text-slate-900 dark:text-white">
+              Industrial Applications
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              El Fedawia Co. provides high-purity minerals that serve as the backbone for global manufacturing and agricultural sectors.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {applications.map((app) => (
-            <div
-              key={app.id}
-              className="group relative h-[380px] rounded-[2rem] overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 animate-float cursor-pointer bg-white"
-              style={{ animationDelay: app.delay }}
-              onMouseEnter={() => setHoveredId(app.id)}
-              onMouseLeave={() => setHoveredId(null)}
-            >
-              {/* Pure Image - No filters, no grayscale */}
-              <Image
-                src={app.image}
-                alt={app.title}
-                fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {applications.map((app) => (
+              <div
+                key={app.id}
+                className="group relative h-[380px] rounded-[2rem] overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 animate-float cursor-pointer bg-white"
+                style={{ animationDelay: app.delay }}
+                onMouseEnter={() => setHoveredId(app.id)}
+                onMouseLeave={() => setHoveredId(null)}
+              >
+                <Image
+                  src={app.image}
+                  alt={app.title}
+                  fill
+                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
 
-              {/* Subtle bottom shadow only (Scrim). 
-                  This ensures the image looks "pure" at the top while keeping text readable.
-              */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 transition-opacity duration-500" />
-              
-              <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-                <h3 className="text-2xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 drop-shadow-md">
-                  {app.title}
-                </h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 transition-opacity duration-500" />
                 
-                <p className={`text-white/95 text-sm leading-relaxed mb-6 transition-all duration-500 drop-shadow-sm ${
-                    hoveredId === app.id ? "opacity-100 max-h-24 translate-y-0" : "opacity-0 max-h-0 translate-y-4"
-                  }`}
-                >
-                  {app.description}
-                </p>
+                <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                  <h3 className="text-2xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 drop-shadow-md">
+                    {app.title}
+                  </h3>
+                  
+                  <p className={`text-white/95 text-sm leading-relaxed mb-6 transition-all duration-500 drop-shadow-sm ${
+                      hoveredId === app.id ? "opacity-100 max-h-24 translate-y-0" : "opacity-0 max-h-0 translate-y-4"
+                    }`}
+                  >
+                    {app.description}
+                  </p>
 
-                <div className="flex items-center gap-2 font-bold group-hover:gap-4 transition-all opacity-0 group-hover:opacity-100">
-                  <span className="text-xs tracking-widest uppercase">Explore</span>
-                  <ArrowRight size={16} />
+                  <div className="flex items-center gap-2 font-bold group-hover:gap-4 transition-all opacity-0 group-hover:opacity-100">
+                    <span className="text-xs tracking-widest uppercase">Explore</span>
+                    <ArrowRight size={16} />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
       <Footer />
-    </section>
+    </>
   )
 }
