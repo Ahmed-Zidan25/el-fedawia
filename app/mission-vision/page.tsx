@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react"
 import { Sparkles, Target } from "lucide-react"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
+
 
 export default function MissionVisionSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -25,6 +28,8 @@ export default function MissionVisionSection() {
   }, [])
 
   return (
+   <>
+      <Header />
     <section
       id="mission-vision"
       className="py-8 md:py-10 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden"
@@ -139,5 +144,7 @@ export default function MissionVisionSection() {
   </div>
       </div>
     </section>
+	 <Footer />
+    </>
   )
 }

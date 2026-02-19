@@ -55,6 +55,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-8 ml-auto">
             {[
               { href: "/", label: "Home" },
+              { href: "/mission-vision", label: "Mission & Vision" },
               { href: "/products", label: "Products" },
 			        { href: "/contact", label: "Contact" },
               { href: "/get-quote", label: "Get Quote" },

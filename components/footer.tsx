@@ -53,12 +53,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/products#kaolin" className="hover:text-primary transition-colors">
-                  Kaolin
+                <Link href="#featured-products" className="hover:text-primary transition-colors">
+                  Talc Powder
                 </Link>
               </li>
               <li>
-                <Link href="/products#limestone" className="hover:text-primary transition-colors">
+                <Link href="#featured-products" className="hover:text-primary transition-colors">
                   Limestone
                 </Link>
               </li>
@@ -69,15 +69,11 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/#mission-vision" className="hover:text-primary transition-colors">
+                <Link href="/mission-vision" className="hover:text-primary transition-colors">
                   About
                 </Link>
               </li>
-              <li>
-                <Link href="/#team" className="hover:text-primary transition-colors">
-                  Team
-                </Link>
-              </li>
+             
               <li>
                 <Link href="/contact" className="hover:text-primary transition-colors">
                   Contact
@@ -87,7 +83,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h4 className="font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
