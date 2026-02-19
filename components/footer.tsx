@@ -62,6 +62,16 @@ export default function Footer() {
                   Limestone
                 </Link>
               </li>
+              <li>
+                <Link href="#featured-products" className="hover:text-primary transition-colors">
+                  Agricultural Gypsum
+                </Link>
+              </li>
+              <li>
+                <Link href="#featured-products" className="hover:text-primary transition-colors">
+                  Feldspar
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -90,14 +100,18 @@ export default function Footer() {
                   Our Location 
                 </Link>
               </li>
-              
+              <li>
+                <Link href="https://wa.me/201003539052" className="hover:text-primary transition-colors">
+                  +201003539052 
+                </Link>
+              </li>
+              <li>
+                <Link href="mailto:montaser@elfedawia.com" className="hover:text-primary transition-colors">
+                  montaser@elfedawia.com 
+                </Link>
+              </li>
             </ul>
 
-            <p className="text-muted-foreground text-sm">
-               +201003539052
-              <br />
-              montaser@elfedawia.com
-            </p>
           </div>
         </div>
 
