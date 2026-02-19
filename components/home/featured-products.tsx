@@ -207,7 +207,7 @@ export default function FeaturedProducts() {
                   </div>
 
                   {/* Applications */}
-                  <div className="mb-6">
+                 {/*  <div className="mb-6">
                     <p className="text-sm font-semibold text-foreground/80 mb-3">Applications:</p>
                     <div className="flex flex-wrap gap-2">
                       {product.applications.map((app, idx) => (
@@ -219,7 +219,7 @@ export default function FeaturedProducts() {
                         </span>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-border/30">
