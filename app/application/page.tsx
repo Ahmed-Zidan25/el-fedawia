@@ -3,6 +3,8 @@
 import { useState } from "react"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 
 const applications = [
   {
@@ -65,7 +67,7 @@ const applications = [
 
 export default function ApplicationsSection() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
-
+<Header />
   return (
     <section className="py-12 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
       <style jsx global>{`
@@ -132,6 +134,7 @@ export default function ApplicationsSection() {
           ))}
         </div>
       </div>
+      <Footer />
     </section>
   )
 }
