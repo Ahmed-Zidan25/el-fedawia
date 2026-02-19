@@ -106,10 +106,7 @@ export default function MissionVisionSection() {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
-=======
-
-            {/* Mission Card */}
+ {/* Mission Card */}
           <div
             className={`group bg-card/80 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all duration-700 flex flex-col ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -139,8 +136,7 @@ export default function MissionVisionSection() {
               </li>
             </ul>
           </div>
->>>>>>> cfb8975 (values)
-        </div>
+  </div>
       </div>
     </section>
   )
