@@ -48,14 +48,14 @@ export default function SustainabilitySection() {
     },
   ]
 
-  const milestones = [
+  /* const milestones = [
     { year: 2024, milestone: "50% carbon reduction achieved" },
     { year: 2025, milestone: "Complete solar installation at all facilities" },
     { year: 2026, milestone: "Zero-waste production certification" },
     { year: 2027, milestone: "Achieve water neutrality" },
     { year: 2028, milestone: "100% renewable energy transition" },
     { year: 2030, milestone: "Carbon-negative operations" },
-  ]
+  ] */
 
   return (
     <section className="py-12 px-4 bg-gradient-to-b from-background to-green-500/5">
@@ -89,31 +89,7 @@ export default function SustainabilitySection() {
           })}
         </div>
 
-        {/* Roadmap */}
-        <div className="bg-card border rounded-xl p-8 mb-16">
-          <h3 className="text-2xl font-bold mb-8 text-center">Sustainability Roadmap 2024-2030</h3>
-          
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary/50 to-primary transform md:-translate-x-1/2" />
-
-            {/* Timeline Items */}
-            <div className="space-y-8 md:space-y-0">
-              {milestones.map((item, idx) => (
-                <div key={idx} className={`flex gap-8 md:mb-12 ${idx % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
-                  <div className="flex-1" />
-                  <div className={`flex-1 relative ${idx % 2 === 0 ? "text-right" : ""}`}>
-                    <div className="absolute left-4 md:left-1/2 top-3 w-8 h-8 bg-primary rounded-full border-4 border-background transform md:-translate-x-1/2 -translate-x-1/2 md:translate-x-0" />
-                    <div className="bg-secondary/50 rounded-lg p-6">
-                      <p className="text-sm font-bold text-primary mb-1">{item.year}</p>
-                      <p className="font-semibold">{item.milestone}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      
 
         {/* Environmental Impact Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
@@ -135,46 +111,7 @@ export default function SustainabilitySection() {
           </div>
         </div>
 
-        {/* Community & Social Responsibility */}
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-8">
-          <h3 className="text-2xl font-bold mb-6">Community & Social Responsibility</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="font-bold mb-4">Local Community Programs</h4>
-              <ul className="space-y-3">
-                <li className="flex gap-3 items-start">
-                  <span className="w-5 h-5 bg-primary text-primary-foreground rounded flex items-center justify-center flex-shrink-0 text-xs">✓</span>
-                  <span>Direct employment of 5,000+ local workers</span>
-                </li>
-                <li className="flex gap-3 items-start">
-                  <span className="w-5 h-5 bg-primary text-primary-foreground rounded flex items-center justify-center flex-shrink-0 text-xs">✓</span>
-                  <span>Vocational training and skills development programs</span>
-                </li>
-                <li className="flex gap-3 items-start">
-                  <span className="w-5 h-5 bg-primary text-primary-foreground rounded flex items-center justify-center flex-shrink-0 text-xs">✓</span>
-                  <span>Community development projects in mining regions</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Industry Leadership</h4>
-              <ul className="space-y-3">
-                <li className="flex gap-3 items-start">
-                  <span className="w-5 h-5 bg-primary text-primary-foreground rounded flex items-center justify-center flex-shrink-0 text-xs">✓</span>
-                  <span>Active member of global sustainability initiatives</span>
-                </li>
-                <li className="flex gap-3 items-start">
-                  <span className="w-5 h-5 bg-primary text-primary-foreground rounded flex items-center justify-center flex-shrink-0 text-xs">✓</span>
-                  <span>Research partnerships with environmental organizations</span>
-                </li>
-                <li className="flex gap-3 items-start">
-                  <span className="w-5 h-5 bg-primary text-primary-foreground rounded flex items-center justify-center flex-shrink-0 text-xs">✓</span>
-                  <span>Transparent sustainability reporting and audits</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </section>
   )

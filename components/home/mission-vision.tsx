@@ -106,6 +106,40 @@ export default function MissionVisionSection() {
               </li>
             </ul>
           </div>
+<<<<<<< HEAD
+=======
+
+            {/* Mission Card */}
+          <div
+            className={`group bg-card/80 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all duration-700 flex flex-col ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-primary/20 rounded-xl group-hover:bg-primary/30 transition-colors">
+                <Target className="text-primary w-8 h-8" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold">Our Values</h3>
+            </div>
+            <p className="text-foreground/80 leading-relaxed mb-6 flex-grow">
+              Integrity, quality, and customer satisfaction are the core values that guide our operations. We believe in building lasting relationships with our clients by consistently exceeding their expectations.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">→</span>
+                <span className="text-foreground/70">Radical Reliability</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">→</span>
+                <span className="text-foreground/70">Partnership Over Projects</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">→</span>
+                <span className="text-foreground/70">The "Plus One" Standard</span>
+              </li>
+            </ul>
+          </div>
+>>>>>>> cfb8975 (values)
         </div>
       </div>
     </section>
