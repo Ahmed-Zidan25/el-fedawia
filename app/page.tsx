@@ -5,8 +5,8 @@ import Footer from "@/components/footer"
 import HeroSection from "@/components/home/hero-section"
 import MissionVisionSection from "@/components/home/mission-vision"
 import FeaturedProducts from "@/components/home/featured-products"
-import ApplicationsSection from "@/components/home/applications-section"
-import WhyChooseSection from "@/components/home/why-choose-section"
+/*import ApplicationsSection from "@/components/home/applications-section" */
+/*import WhyChooseSection from "@/components/home/why-choose-section" */
 import CaseStudiesSection from "@/components/home/case-studies-section"
 import CertificationsSection from "@/components/home/certifications-section" 
 /*import FAQSection from "@/components/home/faq-section" */
@@ -26,7 +26,7 @@ export default function Home() {
       <MissionVisionSection className="mt-[-20px]" />
       <FeaturedProducts />
       <ApplicationsSection />
-      <WhyChooseSection />
+      {/* <WhyChooseSection /> */}
       <CaseStudiesSection />
       <CertificationsSection /> 
     {/*   <TestimonialsSection />*/}

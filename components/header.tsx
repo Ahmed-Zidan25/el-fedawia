@@ -56,6 +56,7 @@ export default function Header() {
             {[
               { href: "/", label: "Home" },
               { href: "/products", label: "Products" },
+			  { href: "/application", label: "Industrial Applications" },
               { href: "/get-quote", label: "Get Quote" },
               { href: "/contact", label: "Contact" },
             ].map((link) => (
