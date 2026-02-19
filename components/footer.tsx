@@ -40,9 +40,7 @@ export default function Footer() {
               <a href="#" className="p-2 hover:bg-secondary-foreground/20 rounded-lg transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="p-2 hover:bg-secondary-foreground/20 rounded-lg transition-colors">
-                <Twitter size={18} />
-              </a>
+             
             </div>
           </div>
 
@@ -50,8 +48,8 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Products</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/products#phosphate" className="hover:text-primary transition-colors">
-                  Phosphate
+                <Link href="/featured-products" className="hover:text-primary transition-colors">
+                  Calcium Carbonate
                 </Link>
               </li>
               <li>
