@@ -16,7 +16,7 @@ import DistributionMap from "@/components/home/distribution-map"
 /*import AvailabilityTracker from "@/components/home/availability-tracker" */
 import SustainabilitySection from "@/components/home/sustainability-section"
 /* import SectorsCarousel from "@/components/home/sectors-carousel" */
-import CTASection from "@/components/home/cta-section"
+/* import CTASection from "@/components/home/cta-section" */
 
 export default function Home() {
   return (
@@ -36,7 +36,7 @@ export default function Home() {
       <SustainabilitySection />
       {/* <FAQSection /> */}
       {/* <SectorsCarousel /> */}
-      <CTASection />
+      {/* <CTASection /> */}
       <Footer />
     </main>
   );
