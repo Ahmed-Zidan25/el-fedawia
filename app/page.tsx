@@ -25,7 +25,7 @@ export default function Home() {
       <HeroSection />
       <MissionVisionSection className="mt-[-20px]" />
       <FeaturedProducts />
-      <ApplicationsSection />
+      {/* <ApplicationsSection /> */}
       {/* <WhyChooseSection /> */}
       <CaseStudiesSection />
       <CertificationsSection /> 
