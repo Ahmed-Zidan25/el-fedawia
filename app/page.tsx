@@ -7,7 +7,7 @@ import MissionVisionSection from "@/components/home/mission-vision"
 import FeaturedProducts from "@/components/home/featured-products"
 /*import ApplicationsSection from "@/components/home/applications-section" */
 /*import WhyChooseSection from "@/components/home/why-choose-section" */
-import CaseStudiesSection from "@/components/home/case-studies-section"
+/*import CaseStudiesSection from "@/components/home/case-studies-section" */
 import CertificationsSection from "@/components/home/certifications-section" 
 /*import FAQSection from "@/components/home/faq-section" */
 /* import TestimonialsSection from "@/components/home/testimonials-section"*/
@@ -27,7 +27,7 @@ export default function Home() {
       <FeaturedProducts />
       {/* <ApplicationsSection /> */}
       {/* <WhyChooseSection /> */}
-      <CaseStudiesSection />
+     {/*  <CaseStudiesSection /> */}
       <CertificationsSection /> 
     {/*   <TestimonialsSection />*/}
       <DistributionMap />

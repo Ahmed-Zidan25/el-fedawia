@@ -71,7 +71,8 @@ export default function ApplicationsSection() {
   return (
     <>
       <Header />
-      <section className="py-12 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+      {/* Increased top padding (pt-24 md:pt-32) below */}
+      <section className="pt-24 pb-12 md:pt-32 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
         <style jsx global>{`
           @keyframes float {
             0% { transform: translateY(0px); }
