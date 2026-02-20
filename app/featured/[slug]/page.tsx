@@ -126,7 +126,7 @@ subItems: [
 ]
 },
 {title: "Sulfur (S)"
-       text: "Sulfur contributes in:" 
+       text: "Sulfur contributes in:", 
        subItems: ["Protein synthesis",
 "Enzyme activation",
 "Improved crop quality",
