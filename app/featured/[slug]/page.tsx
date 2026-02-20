@@ -125,7 +125,7 @@ subItems: [
 "Support overall plant structure"
 ]
 },
-{title: "Sulfur (S)"
+{title: "Sulfur (S)",
        text: "Sulfur contributes in:", 
        subItems: ["Protein synthesis",
 "Enzyme activation",
