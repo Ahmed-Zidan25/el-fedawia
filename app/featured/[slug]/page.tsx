@@ -82,7 +82,7 @@ const productDetails = {
       {
   title: "What Is Agricultural Gypsum?",
   text: "Agricultural gypsum is a natural material composed mainly of calcium sulfate dihydrate (CaSO₄·2H₂O). It is widely used to improve soil structure, reduce salinity and sodicity problems, and enhance overall soil fertility."
-      }
+      },
       {
         title: "Benefits of Agricultural Gypsum for Soil and Crops",
        text: "Agricultural gypsum provides multiple benefits that make it one of the most effective soil conditioners." 
@@ -169,11 +169,9 @@ subItems: [
 "Moderate salinity ---- > 2–3 tons per feddan",
 "Severe salinity / high sodicity ---- > 4–5 tons per feddan",
 "Note: A soil test is strongly recommended to determine the precise application rate."
-
-      ]
-      
-      },
-        {title: "How to Apply Agricultural Gypsum Correctly",
+]
+},
+    {title: "How to Apply Agricultural Gypsum Correctly",
         text: "For best results:",
       subItems: ["Apply before planting",
 "Spread evenly across the field",
