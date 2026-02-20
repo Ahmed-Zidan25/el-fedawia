@@ -29,8 +29,7 @@ export default function FAQSection() {
     ]
 
   return (
-  <>
-      <Header />
+  <Header />
     <section className="pt-24 pb-12 md:pt-32 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
@@ -93,7 +92,7 @@ export default function FAQSection() {
       </div>
     </section>
 	<Footer />
-	</>
+
   )
   )
 }
