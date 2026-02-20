@@ -5,27 +5,28 @@ import Footer from "@/components/footer";
 const productDetails = {
   "calcium-carbonate": {
     name: "Calcium Carbonate (CaCO3)",
-    description: "The world’s most versatile and abundant mineral, sourced from high-purity deposits of limestone and marble.",
-    longContent: "As a leading manufacturer, we provide essential solutions for paint formulations and allied industries. Our products are engineered to enhance chemical inertness, ensure high whiteness, and optimize production economics through superior dispersibility.",
+    description: "Calcium Carbonate (CaCO3) | High-Performance Mineral Solutions.",
+    longContent: "Calcium Carbonate is the world’s most versatile and abundant mineral, sourced from our high-purity deposits of limestone and marble. With a Mohs hardness of approximately 3, it serves as the most efficient, soft, and easy-to-process functional filler in the industry. As a leading manufacturer, we provide essential solutions for paint formulations and allied industries. Our products are engineered to enhance chemical inertness, ensure high whiteness, and optimize production economics through superior dispersibility.",
     benefits: [
-      "Superior Whiteness & Brightness",
-      "Cost Optimization: Partial replacement of Titanium Dioxide (TiO2)",
-      "Advanced Rheology & Film Integrity",
-      "Enhanced Durability and Abrasion Resistance"
+      "Superior Whiteness & Brightness: Provides a clean, neutral white base for high-quality coatings and paper products.",
+      "Cost Optimization: Enables the partial replacement of expensive pigments like Titanium Dioxide (TiO_2), significantly reducing total formulation costs without compromising opacity.",
+"Advanced Rheology & Film Integrity: Improves viscosity control and enhances the mechanical strength and application characteristics of the coating film.",
+"Enhanced Durability: Increases abrasion and wear resistance, ensuring the longevity of the finished surface.",
+"Eco-Friendly & Safe: A non-hazardous, sustainable mineral compatible with strictly regulated environmental standards.",
+"Broad Chemical Compatibility: Resists efflorescence in waterborne systems and integrates seamlessly with various binder chemistries."
     ],
-    tdsUrl: "https://drive.google.com/file/d/1KxbTE11WqXFz8JTSj012VDbU1n4nUtDQ/view?usp=sharing"
+    tdsUrl: "/pdfs/Calcium-Carbonate.pdf"
   },
   "coated-calcium-carbonate": {
     name: "Coated Calcium Carbonate",
-    description: "Surface-treated calcium carbonate with advanced stearic acid coating for superior dispersion.",
-    longContent: "Our coated grade is specifically designed for plastic and polymer applications. The organic treatment prevents particle agglomeration and ensures a hydrophobic surface, making it perfectly compatible with non-polar resins.",
+    description: "Surface-Treated Calcium Carbonate (CGCC).",
+    longContent: "Our flagship Processed Grade, treated with Stearic Acid to transform the mineral from hydrophilic to hydrophobic. This grade is specifically designed for:",
     benefits: [
-      "Reduced Plasticizer Absorption",
-      "Excellent Dispersion in Polymers",
-      "Improved Impact Strength",
-      "Enhanced Surface Gloss"
+      "Plastics & PVC: Improved bonding with polymer resins.",
+"Optimized Processing: Lower plasticizer absorption and reduced machine wear.",
+"Superior Dispersion: Prevention of particle agglomeration in non-polar systems."
     ],
-    tdsUrl: "#"
+    tdsUrl: "/pdfs/Calcium-Carbonate.pdf"
   },
   "talc-powder": {
     name: "Premium Talc Solutions",
