@@ -26,7 +26,7 @@ export default function DistributionMap() {
 
   // This URL uses the free embedding method that doesn't require an API Key
   /* const freeMapUrl = "https://maps.google.com/maps?q=Cairo,Bani%20Suef&t=&z=7&ie=UTF8&iwloc=&output=embed"; */
-  const freeMapUrl = "https://maps.app.goo.gl/GfAp41eMLD5nEYQF6?g_st=aw";
+  const freeMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.059066914803!2d31.176187499999994!3d29.1039375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145a2159b826af93%3A0xd46e95388c41777a!2sEl%20Fedawia%20Co.%20For%20Mining%20%26%20Manufacturing!5e0!3m2!1sen!2seg!4v1771556235694!5m2!1sen!2seg";
 
   return (
     <section className="py-12 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
