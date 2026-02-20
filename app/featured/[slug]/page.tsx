@@ -3,7 +3,6 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 const productDetails = {
-  // Key must match: product.name.toLowerCase().replace(/ /g, '-')
   "calcium-carbonate": {
     name: "Calcium Carbonate (CaCO3)",
     description: "The world’s most versatile and abundant mineral, sourced from high-purity deposits of limestone and marble.",
@@ -67,7 +66,7 @@ const productDetails = {
   "rock-phosphate-powder": {
     name: "Rock Phosphate Powder",
     description: "High-quality natural phosphorus source for organic farming and fertilizer production.",
-    longContent: "Our rock phosphate is finely ground to ensure maximum surface area and availability. It is a slow-release phosphorus source that builds long-term soil fertility without the risk of leaching common in chemical fertilizers.",
+    longContent: "Our rock phosphate is finely ground to ensure maximum surface area and availability. It is a slow-release phosphorus source that builds long-term soil fertility.",
     benefits: [
       "High P2O5 concentration",
       "100% Organic and Natural",
@@ -79,7 +78,7 @@ const productDetails = {
   "kaolin": {
     name: "Refined Kaolin (China Clay)",
     description: "A high-purity natural mineral composed of hydrated aluminum silicate.",
-    longContent: "Valued for its fine texture, brightness, and chemical stability. Essential for ceramics, porcelain, and the paper industry to enhance smoothness and opacity.",
+    longContent: "Valued for its fine texture, brightness, and chemical stability. Essential for ceramics, porcelain, and the paper industry.",
     benefits: [
       "Exceptional brightness and whiteness",
       "Improved strength in ceramics",
@@ -96,22 +95,27 @@ const productDetails = {
       "Reduced melting temperatures",
       "Improved durability and surface finish",
       "Consistent chemical properties",
-      "Alkali-rich composition for industrial performance" 
+      "Alkali-rich composition" 
     ],
     tdsUrl: "#"
   }
 };
 
-export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  // Use decoded URL to find the product
-  const decodedSlug = decodeURIComponent(params.slug);
+// Next.js params are now async in newer versions
+export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug;
+  const decodedSlug = decodeURIComponent(slug);
+  
   const product = productDetails[decodedSlug as keyof typeof productDetails];
 
   if (!product) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-4">
-        <h1 className="text-2xl font-bold mb-4">Product Not Found: {decodedSlug}</h1>
-        <p className="mb-6 text-muted-foreground">Please check the URL or return to the products page.</p>
+        <h1 className="text-2xl font-bold mb-4">Product Not Found: "{decodedSlug}"</h1>
+        <p className="mb-6 text-muted-foreground text-center">
+          The link sent us to <code className="bg-slate-100 p-1">{decodedSlug}</code>, but that key doesn't exist in our data.
+        </p>
         <a href="/" className="px-6 py-2 bg-red-600 text-white rounded-lg">Return Home</a>
       </div>
     );
@@ -122,7 +126,6 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       <Header />
       <main className="min-h-screen pt-32 pb-16 bg-slate-50 dark:bg-slate-950">
         <div className="max-w-4xl mx-auto px-4">
-          
           <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
             <a href="/" className="hover:text-primary transition-colors">Home</a>
             <ChevronRight size={14} />
@@ -130,9 +133,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           </nav>
 
           <div className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">
-              {product.name}
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">{product.name}</h1>
             <p className="text-xl text-slate-700 dark:text-slate-300 leading-relaxed border-l-4 border-red-600 pl-6 italic">
               {product.description}
             </p>
@@ -140,9 +141,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
           <div className="prose prose-slate dark:prose-invert max-w-none mb-16">
             <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Technical Overview</h2>
-            <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-              {product.longContent}
-            </p>
+            <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">{product.longContent}</p>
 
             <h2 className="text-2xl font-bold mt-12 mb-6 text-slate-900 dark:text-white">Key Strategic Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -158,9 +157,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           <div className="bg-red-600 rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl shadow-red-600/20 flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold mb-2">Technical Data Sheet (TDS)</h2>
-              <p className="text-red-50 text-lg opacity-90">
-                Get full chemical composition and particle size distribution.
-              </p>
+              <p className="text-red-50 text-lg opacity-90">Get full chemical composition and particle size distribution.</p>
             </div>
             <a
               href={product.tdsUrl}
@@ -168,8 +165,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-white text-red-600 px-8 py-4 rounded-2xl font-black text-lg hover:bg-slate-100 transition-all active:scale-95 shadow-lg"
             >
-              <FileText size={24} />
-              DOWNLOAD TDS
+              <FileText size={24} /> DOWNLOAD TDS
             </a>
           </div>
         </div>
