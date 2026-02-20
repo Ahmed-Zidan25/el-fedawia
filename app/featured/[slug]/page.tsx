@@ -42,7 +42,7 @@ const productDetails = {
   "limestone": {
     name: "Industrial Limestone",
     description: "Ground Limestone (Calcium Carbonate) – Industrial Applications.",
-    longContent: "Ground limestone, also known as calcium carbonate (CaCO₃), is one of the most widely used industrial minerals worldwide. Produced by crushing and grinding high-quality limestone into controlled millimeter-sized particles, this versatile material plays a vital role in a wide range of manufacturing and construction sectors. <br /> Due to its high purity, excellent whiteness, cost-effectiveness, and chemical stability, ground limestone is a preferred raw material for many industries.",
+    longContent: "Ground limestone, also known as calcium carbonate (CaCO₃), is one of the most widely used industrial minerals worldwide. Produced by crushing and grinding high-quality limestone into controlled millimeter-sized particles, this versatile material plays a vital role in a wide range of manufacturing and construction sectors. Due to its high purity, excellent whiteness, cost-effectiveness, and chemical stability, ground limestone is a preferred raw material for many industries.",
     benefits: [
       {
         title: "Cement and Construction Materials",
@@ -76,15 +76,112 @@ const productDetails = {
   },
   "agricultural-gypsum": {
     name: "Agricultural Gypsum",
-    description: "One of the most important natural soil amendments used to improve soil quality and increase crop productivity.",
-    longContent: "Composed mainly of calcium sulfate dihydrate, it is widely used to improve soil structure, reduce salinity and sodicity problems, and enhance overall soil fertility.",
+    description: "Benefits of Agricultural Gypsum, Application Timing, Recommended Rates per Feddan, and Reasons for Use.",
+    longContent: "Agricultural gypsum is one of the most important natural soil amendments used by farmers to improve soil quality and increase crop productivity—especially in saline, sodic, and heavy clay soils.In this article, we will cover the benefits of agricultural gypsum, when to apply it, recommended application rates per feddan, reasons for use, and the nutrients it supplies to support plant growth stages.",
     benefits: [
-      "Reduces Soil Salinity and Sodicity",
-      "Supplies essential Calcium (Ca) and Sulfur (S)",
-      "Breaks up compacted heavy clay soils",
-      "Enhances water infiltration and root development"
-    ],
-    tdsUrl: "#"
+      {
+  title: "What Is Agricultural Gypsum?",
+  text: "Agricultural gypsum is a natural material composed mainly of calcium sulfate dihydrate (CaSO₄·2H₂O). It is widely used to improve soil structure, reduce salinity and sodicity problems, and enhance overall soil fertility."
+      }
+      {
+        title: "Benefits of Agricultural Gypsum for Soil and Crops",
+       text: "Agricultural gypsum provides multiple benefits that make it one of the most effective soil conditioners." 
+      },
+      {title: "Reduces Soil Salinity and Sodicity",
+       text: "Gypsum helps replace excess sodium (Na) in the soil with calcium, which:", 
+       subItems: [
+        "Reduces soil alkalinity",
+"Improves soil fertility",
+"Enhances root nutrient uptake",
+"Promotes healthier plant growth"
+       ]
+      },
+{title: "Improves Soil Structure",
+       text: "In heavy clay soils, gypsum:",
+       subItems: [
+"Breaks up compacted soil",
+"Improves soil aeration",
+"Enhances water infiltration and drainage",
+"Prevents surface crusting"
+       ]
+      },
+{title: "Increases Crop Productivity",
+       text: "By improving soil conditions, plants can absorb nutrients more efficiently, resulting in:" ,
+subItems: [
+"Stronger root systems",
+"Higher yield",
+"Better crop quality"
+]
+},
+      {title: "Enhances Water and Fertilizer Efficiency",
+       text: "Gypsum improves irrigation efficiency and increases the effectiveness of applied fertilizers." 
+      },
+{title: "What Nutrients Does Agricultural Gypsum Supply?",
+       text: "Agricultural gypsum is an important source of two essential plant nutrients:" ,
+       subItems: ["Calcium (Ca): Calcium helps:",
+        "Strengthen root development",
+"Improve cell wall formation",
+"Increase plant resistance to diseases",
+"Support overall plant structure"
+]
+},
+{title: "Sulfur (S)"
+       text: "Sulfur contributes in:" 
+       subItems: ["Protein synthesis",
+"Enzyme activation",
+"Improved crop quality",
+"Better tolerance to stress conditions"
+]
+      },
+      {title: "Reasons to Use Agricultural Gypsum",
+        text: "Agricultural gypsum is recommended in the following situations:",
+      subItems: [
+        "Saline and sodic soils",
+"High sodium levels in soil tests",
+"Poor root development",
+"Heavy clay soils",
+"Poor soil drainage",
+"Declining soil fertility due to repeated cultivation"
+ ]
+      },
+        {title: "Best Time to Apply Agricultural Gypsum",
+        text: "Proper timing ensures maximum effectiveness.",
+        subItems: [
+"Before Planting (Best Time)",
+"• The ideal time to apply gypsum is during land preparation before planting. This allows the soil to improve before crop establishment.",
+"During Land Preparation and Tillage",
+"Gypsum should be evenly spread and incorporated into the soil before the final plowing.",
+"When Salinity Symptoms Appear",
+"Such as:",
+"• White salt crust on soil surface",
+"• Poor plant growth",
+"• Yellowing leaves",
+"• Weak root systems",
+"After Harvest",
+"It can also be applied after harvest to rehabilitate soil and prepare it for the next growing season."
+        ]
+     },
+        {title: "Recommended Application Rates per Feddan",
+        text: "Application rates depend on soil condition and salinity level. General guidelines are:",
+      subItems: [
+        "Slight soil improvement ---- > needed	1 ton per feddan",
+"Heavy clay soil ---- > 1–2 tons per feddan",
+"Moderate salinity ---- > 2–3 tons per feddan",
+"Severe salinity / high sodicity ---- > 4–5 tons per feddan",
+"Note: A soil test is strongly recommended to determine the precise application rate."
+
+      ]
+      
+      },
+        {title: "How to Apply Agricultural Gypsum Correctly",
+        text: "For best results:",
+      subItems: ["Apply before planting",
+"Spread evenly across the field",
+"Incorporate into soil through plowing",
+"Irrigate thoroughly after application to help leach excess salts"
+]},
+],
+    tdsUrl: "/pdfs/gypsum.pdf"
   },
   "rock-phosphate-powder": {
     name: "Rock Phosphate Powder",
@@ -100,25 +197,24 @@ const productDetails = {
   },
   "kaolin": {
     name: "Refined Kaolin (China Clay)",
-    description: "A high-purity natural mineral composed of hydrated aluminum silicate.",
-    longContent: "Valued for its fine texture, brightness, and chemical stability. Essential for ceramics, porcelain, and the paper industry.",
+    description: "Kaolin (China Clay) is a high-purity natural mineral widely used in advanced industrial applications.",
+    longContent: "It is mainly composed of hydrated aluminum silicate (Al₂Si₂O₅(OH)₄) and is valued for its fine texture, brightness, and chemical stability.",
     benefits: [
-      "Exceptional brightness and whiteness",
-      "Improved strength in ceramics",
-      "Better coverage and consistency in paints",
-      "Chemical stability and inertness"
+      "Kaolin is an essential raw material in ceramics and porcelain, improving strength and whiteness.",
+      "It is also used in the paper industry to enhance smoothness, opacity, and print quality.",
+      "In paints and coatings, kaolin provides better coverage and consistency.",
+      "Kaolin is additionally applied in rubber, plastics, and agriculture for durability and protective solutions."
     ],
     tdsUrl: "#"
   },
   "feldspar": {
     name: "Ground Feldspar",
-    description: "Essential raw material for the glass and ceramic manufacturing sectors.",
-    longContent: "Acts as a flux to reduce melting temperatures and improve the strength, durability, and surface finish of final products.",
+    description: "Ground Feldspar is a finely processed mineral widely used in many industrial applications",
+    longContent: "It is produced by crushing and grinding natural feldspar into a powder form.",
     benefits: [
-      "Reduced melting temperatures",
-      "Improved durability and surface finish",
-      "Consistent chemical properties",
-      "Alkali-rich composition" 
+      "Ground feldspar is mainly used in the ceramics and glass industries, where it acts as a flux to reduce melting temperatures and improve the strength, durability, and surface finish of the final products. ",
+      "It is also utilized in paints, plastics, rubber, and construction materials as a functional filler that enhances performance and quality.",
+      "Due to its versatility and consistent properties, ground feldspar is an essential raw material in modern manufacturing." 
     ],
     tdsUrl: "#"
   }
