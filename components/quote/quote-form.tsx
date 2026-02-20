@@ -22,12 +22,14 @@ export default function QuoteForm() {
   const [errorMessage, setErrorMessage] = useState("")
 
   const products = [
-    "Super Phosphate",
-    "Kaolin Grade A",
-    "Kaolin Grade B",
-    "Crushed Limestone",
-    "Limestone Powder",
-    "Raw Mineral Ore",
+    "Calcium Carbonate",
+    "Coated calcium carbonate",
+    "Talc Powder",
+    "Limestone",
+    "Agricultural Gypsum",
+    "Rock Phosphate Powder",
+    "Kaolin",
+    "Feldspar",
     "Other",
   ]
 
