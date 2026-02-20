@@ -24,8 +24,8 @@ export default function FAQSection() {
           q: "Can your products be used in outdoor/exterior coatings?",
           a: "Absolutely. It is a staple in exterior paints to optimize opacity. While $TiO_2$ provides UV resistance, our high-purity grades support weather resistance while significantly lowering the overall cost per liter.",
         },
-      ],
-    },
+      ]
+    }
     ]
 
   return (
