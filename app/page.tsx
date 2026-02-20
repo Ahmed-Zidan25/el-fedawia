@@ -12,7 +12,7 @@ import CertificationsSection from "@/components/home/certifications-section"
 /*import FAQSection from "@/components/home/faq-section" */
 /* import TestimonialsSection from "@/components/home/testimonials-section"*/
 import DistributionMap from "@/components/home/distribution-map"
-/*import CapacityDashboard from "@/components/home/capacity-dashboard" */
+import CapacityDashboard from "@/components/home/capacity-dashboard" 
 /*import AvailabilityTracker from "@/components/home/availability-tracker" */
 /* import SustainabilitySection from "@/components/home/sustainability-section" */
 /* import SectorsCarousel from "@/components/home/sectors-carousel" */
@@ -31,7 +31,7 @@ export default function Home() {
       <CertificationsSection /> 
     {/*   <TestimonialsSection />*/}
       <DistributionMap />
-      {/* <CapacityDashboard /> */}
+      <CapacityDashboard /> 
       {/* <AvailabilityTracker /> */}
      {/*  <SustainabilitySection /> */}
       {/* <FAQSection /> */}
