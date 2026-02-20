@@ -41,13 +41,32 @@ const productDetails = {
   },
   "limestone": {
     name: "Industrial Limestone",
-    description: "High-quality limestone crushed and ground into controlled particles for manufacturing and construction.",
-    longContent: "Preferred for its high purity, excellent whiteness, and cost-effectiveness. It is essential in cement production, bricks, and concrete products.",
+    description: "Ground Limestone (Calcium Carbonate) – Industrial Applications.",
+    longContent: "Ground limestone, also known as calcium carbonate (CaCO₃), is one of the most widely used industrial minerals worldwide. Produced by crushing and grinding high-quality limestone into controlled millimeter-sized particles, this versatile material plays a vital role in a wide range of manufacturing and construction sectors. <br /> Due to its high purity, excellent whiteness, cost-effectiveness, and chemical stability, ground limestone is a preferred raw material for many industries.",
     benefits: [
-      "High calcium carbonate content",
-      "Consistent particle size distribution",
-      "Improves structural performance in concrete",
-      "Used as a fluxing agent in glass and ceramics"
+      {
+        title: "Cement and Construction Materials",
+        text: "Ground limestone is an essential component in the cement industry. It is used both as a raw feed material and as a mineral additive to improve workability and reduce production costs. It also contributes to enhanced strength and durability in construction products.",
+       
+      },
+      {title: "Bricks, Blocks, and Concrete Products",
+      text: "In the production of concrete blocks, bricks, and precast materials, limestone powder improves structural performance, reduces shrinkage, and enhances the overall quality of the final product."
+      },
+ {title: "Animal Feed and Agriculture",
+      text: "Limestone is an important source of calcium in animal nutrition, particularly for poultry and livestock. It supports healthy bone development and eggshell formation. Agricultural-grade limestone is also used to improve soil pH and fertility."
+      },
+       {title: "Water Treatment and Environmental Uses",
+      text: "Ground limestone is used in water treatment facilities to neutralize acidity and remove impurities. It is also applied in environmental projects to control pollution and improve water quality."
+      },
+       {title: "Glass and Ceramics Production",
+      text: "In ceramics and glass manufacturing, limestone acts as a fluxing agent, helping to reduce melting temperatures and improve product strength and clarity."
+      },
+      {title: "Why Choose Our Ground Limestone?",
+      text: "Consistent particle size distribution"
+      text: "High calcium carbonate content"
+      text: "Reliable industrial performance"
+      text: "Custom sizing for different applications"
+      }
     ],
     tdsUrl: "#"
   },
@@ -144,14 +163,40 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">{product.longContent}</p>
 
             <h2 className="text-2xl font-bold mt-12 mb-6 text-slate-900 dark:text-white">Key Strategic Benefits</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {product.benefits.map((benefit, i) => (
-                <div key={i} className="flex items-start gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
-                  <CheckCircle2 className="text-red-600 shrink-0 mt-1" size={20} />
-                  <span className="text-slate-800 dark:text-slate-200 font-medium">{benefit}</span>
-                </div>
-              ))}
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {product.benefits.map((benefit, i) => (
+    <div key={i} className="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+      <div className="flex items-start gap-3 mb-3">
+        <CheckCircle2 className="text-red-600 shrink-0 mt-1" size={20} />
+        <div>
+          {/* Main Title or Text */}
+          <span className="text-slate-900 dark:text-white font-bold block text-lg">
+            {typeof benefit === 'string' ? benefit : benefit.title}
+          </span>
+          
+          {/* Description Text (if it's an object) */}
+          {typeof benefit !== 'string' && benefit.text && (
+            <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
+              {benefit.text}
+            </p>
+          )}
+        </div>
+      </div>
+
+      {/* Render the Sublist if it exists */}
+      {typeof benefit !== 'string' && benefit.subItems && benefit.subItems.length > 0 && (
+        <ul className="ml-8 space-y-2 mt-4 border-l-2 border-slate-100 dark:border-slate-800 pl-4">
+          {benefit.subItems.map((sub, j) => (
+            <li key={j} className="text-sm text-slate-500 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-red-400 rounded-full" />
+              {sub}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  ))}
+</div>
           </div>
 
           <div className="bg-red-600 rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl shadow-red-600/20 flex flex-col md:flex-row items-center justify-between gap-8">
