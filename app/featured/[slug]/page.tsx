@@ -28,18 +28,21 @@ const productDetails = {
     ],
     tdsUrl: "/pdfs/Calcium-Carbonate.pdf"
   },
-  "talc-powder": {
-    name: "Premium Talc Solutions",
-    description: "The world’s softest and most hydrophobic mineral—insoluble and inert.",
-    longContent: "Our FD Talc product range is manufactured from carefully selected, high-purity deposits with controlled mineral content. It adds new features to products and makes processes more efficient.",
-    benefits: [
-      "Exceptional softness and hydrophobic nature",
-      "High chemical stability",
-      "Advanced particle size distribution (PSD)",
-      "High aspect ratio for high-tech applications"
-    ],
-    tdsUrl: "#" 
-  },
+ "talc-powder": {
+  name: "Premium Talc Solutions from Egypt",
+  description: "Talc is one of the most versatile industrial minerals, valued for its exceptional softness, hydrophobic nature, and chemical stability. It enhances product quality, improves processing efficiency, and delivers reliable performance across a wide range of applications.",
+  longContent: "Elfedawia Co. is uniquely positioned with access to high-quality talc reserves in Egypt, enabling us to supply consistent, pure, and reliable talc products to global markets at a time when premium resources are becoming increasingly scarce worldwide. <br /><br /> The performance of talc depends on its particle size distribution and particle shape. At Elfedawia Co., we apply advanced milling and classification techniques to produce talc with uniform particle sizes, optimized PSD curves, and excellent dispersion characteristics—ensuring dependable results in every application. <br /><br /> Our FD Talc product range is manufactured from carefully selected, high-purity deposits with controlled mineral content. We also offer special high–aspect-ratio talc grades, developed for advanced and high-performance applications requiring precision and consistency.",
+  benefits: [
+    "Paper & Packaging",
+    "Paints & Coatings",
+    "Plastics & Polymers",
+    "Polyester Putties",
+    "Adhesives & Sealants",
+    "Cosmetics & Personal Care",
+    "Ceramics"
+  ],
+  tdsUrl: "/pdfs/Talc.pdf" 
+},
   "limestone": {
     name: "Industrial Limestone",
     description: "Ground Limestone (Calcium Carbonate) – Industrial Applications.",
@@ -259,8 +262,11 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
           <div className="prose prose-slate dark:prose-invert max-w-none mb-16">
             <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Technical Overview</h2>
-            <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">{product.longContent}</p>
-
+           {/*  <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">{product.longContent}</p> */}
+<p 
+  className="text-lg leading-relaxed text-slate-600 dark:text-slate-400"
+  dangerouslySetInnerHTML={{ __html: product.longContent }}
+/>
             <h2 className="text-2xl font-bold mt-12 mb-6 text-slate-900 dark:text-white">Key Strategic Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
   {product.benefits.map((benefit, i) => (
