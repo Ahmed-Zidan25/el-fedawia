@@ -221,7 +221,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 <FileText size={22} /> TDS
               </a>
               <a
-                href={`/contact?product=${encodeURIComponent(product.name)}`}
+                href={`/get-quote?product=${encodeURIComponent(product.name)}`}
                 className="flex items-center justify-center gap-3 bg-white text-red-600 px-8 py-4 rounded-2xl font-black text-lg hover:bg-slate-100 transition-all shadow-lg"
               >
                 <MessageSquare size={22} /> GET QUOTE
