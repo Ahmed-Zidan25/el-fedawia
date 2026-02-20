@@ -45,7 +45,7 @@ export default function SocialMediaSection() {
     {
       icon: Facebook,
       label: "Facebook",
-      href: "#",
+      href: "https://www.facebook.com/profile.php?id=61582687824034",
       value: "@ElFedawiaCo",
       bgColor: "from-blue-600/10 to-blue-600/5",
     },

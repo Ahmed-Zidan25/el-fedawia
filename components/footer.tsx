@@ -37,7 +37,7 @@ export default function Footer() {
               <a href="#" className="p-2 hover:bg-secondary-foreground/20 rounded-lg transition-colors">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="p-2 hover:bg-secondary-foreground/20 rounded-lg transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61582687824034" className="p-2 hover:bg-secondary-foreground/20 rounded-lg transition-colors">
                 <Facebook size={18} />
               </a>
              
