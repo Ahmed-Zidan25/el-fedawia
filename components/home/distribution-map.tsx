@@ -25,7 +25,8 @@ export default function DistributionMap() {
   ]
 
   // This URL uses the free embedding method that doesn't require an API Key
-  const freeMapUrl = "https://maps.google.com/maps?q=Cairo,Bani%20Suef&t=&z=7&ie=UTF8&iwloc=&output=embed";
+  /* const freeMapUrl = "https://maps.google.com/maps?q=Cairo,Bani%20Suef&t=&z=7&ie=UTF8&iwloc=&output=embed"; */
+  const freeMapUrl = "https://maps.app.goo.gl/GfAp41eMLD5nEYQF6?g_st=aw";
 
   return (
     <section className="py-12 px-4 bg-slate-50 dark:bg-slate-950 overflow-hidden">
