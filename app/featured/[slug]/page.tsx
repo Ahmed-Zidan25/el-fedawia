@@ -62,9 +62,9 @@ const productDetails = {
       text: "In ceramics and glass manufacturing, limestone acts as a fluxing agent, helping to reduce melting temperatures and improve product strength and clarity."
       },
       {title: "Why Choose Our Ground Limestone?",
-      text: "Consistent particle size distribution"
-      text: "High calcium carbonate content"
-      text: "Reliable industrial performance"
+      text: "Consistent particle size distribution",
+      text: "High calcium carbonate content",
+      text: "Reliable industrial performance",
       text: "Custom sizing for different applications"
       }
     ],
