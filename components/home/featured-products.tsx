@@ -9,7 +9,7 @@ const featuredProducts = [
     id: 1,
     name: 'Calcium Carbonate',
     subtitle: 'Natural Grade',
-    image: '/featured-calcium-carbonate-natural.jpg',
+    image: 'images/cac03 powder.webp',
     description: 'Pure natural calcium carbonate for diverse industrial applications',
     features: [
       'High whiteness (96-98%)',
@@ -24,7 +24,7 @@ const featuredProducts = [
     id: 2,
     name: 'Coated calcium carbonate',
     subtitle: 'Advanced Coated Grade',
-    image: '/featured-calcium-carbonate-treated.png',
+    image: 'images/CaCo3 coated.png',
     description: 'Surface-treated calcium carbonate with advanced dispersion properties',
     features: [
       'Advanced dispersion coating',
