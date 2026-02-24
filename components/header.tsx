@@ -56,7 +56,6 @@ export default function Header() {
             {[
               { href: "/", label: "Home" },
               { href: "#featured-products", label: "Featured Products" },
-              { href: "/mission-vision", label: "Mission & Vision" },
               { href: "/products", label: "Products" },
 			        { href: "/contact", label: "Contact" },
               { href: "/get-quote", label: "Get Quote" },
