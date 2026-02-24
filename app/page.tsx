@@ -3,7 +3,7 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import HeroSection from "@/components/home/hero-section"
-/* import MissionVisionSection from "@/components/home/mission-vision" */
+import MissionVisionSection from "@/components/home/mission-vision" 
 import FeaturedProducts from "@/components/home/featured-products"
 /*import ApplicationsSection from "@/components/home/applications-section" */
 /*import WhyChooseSection from "@/components/home/why-choose-section" */
@@ -30,7 +30,7 @@ export default function Home() {
      {/*  <CaseStudiesSection /> */}
       <CertificationsSection /> 
     {/*   <TestimonialsSection />*/}
-      <DistributionMap />
+      {/* <DistributionMap /> */}
       {/* <CapacityDashboard /> */} 
       {/* <AvailabilityTracker /> */}
      {/*  <SustainabilitySection /> */}
