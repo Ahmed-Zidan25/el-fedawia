@@ -11,8 +11,8 @@ import FeaturedProducts from "@/components/home/featured-products"
 import CertificationsSection from "@/components/home/certifications-section" 
 /*import FAQSection from "@/components/home/faq-section" */
 /* import TestimonialsSection from "@/components/home/testimonials-section"*/
-import DistributionMap from "@/components/home/distribution-map"
-import CapacityDashboard from "@/components/home/capacity-dashboard" 
+/* import DistributionMap from "@/components/home/distribution-map" */
+/* import CapacityDashboard from "@/components/home/capacity-dashboard" 
 /*import AvailabilityTracker from "@/components/home/availability-tracker" */
 /* import SustainabilitySection from "@/components/home/sustainability-section" */
 /* import SectorsCarousel from "@/components/home/sectors-carousel" */
@@ -23,7 +23,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col pt-20">
       <Header />
       <HeroSection />
-      {/* <MissionVisionSection className="mt-[-20px]" /> */}
+      <MissionVisionSection className="mt-[-20px]" /> 
       <FeaturedProducts />
       {/* <ApplicationsSection /> */}
       {/* <WhyChooseSection /> */}
@@ -31,7 +31,7 @@ export default function Home() {
       <CertificationsSection /> 
     {/*   <TestimonialsSection />*/}
       <DistributionMap />
-      <CapacityDashboard /> 
+      {/* <CapacityDashboard /> */} 
       {/* <AvailabilityTracker /> */}
      {/*  <SustainabilitySection /> */}
       {/* <FAQSection /> */}
