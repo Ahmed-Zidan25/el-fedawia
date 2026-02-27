@@ -173,6 +173,68 @@ const productDetails = {
     ],
     tdsUrl: '/pdfs/gypsum.pdf',
   },
+ Phosphate: {
+    name: 'Rock Phosphate Powder',
+    description: 'High-grade Phosphorous source for Fertilizer & Chemical industries.',
+    longContent:
+      'Whether you require ultrafine powders or specific grain sizes, our processing plants deliver consistent results that guarantee smooth integration into your production lines.',
+    applications: [
+      { title: 'Ceramic Applications', image: '/applications/limestone6.jpeg' },
+      { title: 'Fertilizers', image: '/applications/phosphate-fertilizer.jpg' },
+    { title: 'Animal Feed Supplements', image: '/applications/limestone1.png' },
+    { title: 'Water Treatment', image: '/applications/limestone5.png' },
+    ],
+    benefits: [
+      {
+        title: 'High P2O5 Content',
+        text: 'Ensures maximum efficiency in fertilizer production.',
+      },
+      {
+        title: 'Chemical Purity',
+        text: 'Low iron and aluminum impurities for cleaner processing.',
+      },
+    ],
+    tdsUrl: '',
+  },
+
+Kaolin: {
+    name: 'Kaolin',
+    description: 'Hydrated Aluminum Silicate for Paper, Ceramics, and Coating Applications.',
+    longContent:
+      'Our Kaolin is a high-purity, white, alumina-silicate mineral. Known for its fine particle size and plate-like structure, it provides excellent opacity and rheological control in industrial formulations.',
+    applications: [
+      { title: 'Paper Coating', image: '/applications/high-angle-decorative-vinyls-arrangement.jpg' },
+      { title: 'Ceramic Glazes', image: '/applications/ceramic-pottery-tools-still-life.jpg' },
+    { title: 'Paint Extenders', image: '/applications/top-view-paint-can.jpg' },
+    { title: 'Rubber Reinforcement', image: '/applications/close-up-perforated-fabric.jpg' },
+    ],
+    benefits: [
+      {title: 'High Whiteness', text: 'Enhances brightness in paper and ceramic applications.',},
+      {title: "Platy Structure", text: "Improves film integrity and barrier properties in coatings."},
+      {title: "Chemical Inertness", text: "Remains stable across a wide range of pH levels and temperatures."}
+    ],
+    tdsUrl: '',
+  },
+  
+feldspar: {
+    name: 'Feldspar',
+    description: 'Essential fluxing agent for the glass and ceramic manufacturing sectors.',
+    longContent:
+      'Feldspar is the most important mineral for the glass and ceramic industries. Our high-grade ground feldspar acts as a powerful flux, reducing melting temperatures and improving the structural integrity of the final product.',
+    applications: [
+      { title: 'Glass Manufacturing', image: '/applications/limestone3.png' },
+      { title: 'Ceramic Glazes', image: '/applications/ceramic-pottery-tools-still-life.jpg' },
+    { title: 'Sanitaryware', image: '/applications/modern-bathroom-with-blue-tile-glass-shower.jpg' },
+    { title: 'Paint & Plastics Filler', image: '/applications/front-view-colored-paint-cups.jpg' },
+    ],
+    benefits: [
+    {title: "Energy Efficiency", text: "Lowers melting points in furnaces, significantly reducing energy costs."},
+    {title: "Chemical Durability", text: "Enhances the resistance of glass and ceramics to environmental weathering."},
+    {title: "Excellent Dispersibility", text: "Easily integrates into paint and plastic formulations as a high-performance filler."} 
+  ],
+    tdsUrl: '',
+  },
+
 } as const
 
 function BenefitItem({ benefit }: { benefit: any }) {
