@@ -110,7 +110,7 @@ const featuredProducts = [
     id: 8,
     name: 'Feldspar',
     subtitle: 'Potassium / Sodium Grade',
-    image: '/featured-feldspar.jpg',
+    image: '/images/featured-feldspar.jpg',
     description: 'Essential fluxing agent for the glass and ceramic manufacturing sectors',
     features: [
       'Alkali-rich composition',
