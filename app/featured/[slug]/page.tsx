@@ -13,6 +13,23 @@ const productDetails = {
     name: "Calcium Carbonate (CaCO3)",
     description: "Calcium Carbonate (CaCO3) | High-Performance Mineral Solutions.",
     longContent: "Calcium Carbonate is the world’s most versatile and abundant mineral, sourced from our high-purity deposits of limestone and marble. With a Mohs hardness of approximately 3, it serves as the most efficient, soft, and easy-to-process functional filler in the industry. As a leading manufacturer, we provide essential solutions for paint formulations and allied industries. Our products are engineered to enhance chemical inertness, ensure high whiteness, and optimize production economics through superior dispersibility.",
+    applications: [
+      {
+    title: "Calcium Nitrate Fertilizers",
+    image: "/applications/Calcium nitrate fertilizers.png"
+  },
+       {
+    title: "Gypsum Boards",
+    image: "/applications/gypsum boards.png"
+  },
+   {
+    title: "Paints & Coatings",
+    image: "/applications/PAINTS & COATING.png"
+  },
+   {
+    title: "Paper",
+    image: "/applications/PAPER.png"
+  },]
     benefits: [
       {title: "Superior Whiteness & Brightness", text: "Provides a clean, neutral white base for high-quality coatings and paper products."},
       {title: "Cost Optimization", text: "Enables the partial replacement of expensive pigments like Titanium Dioxide (TiO_2), significantly reducing total formulation costs without compromising opacity."},
@@ -350,9 +367,18 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 <div className="mb-16">
   {/* ... */}
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-    {product.applications.map((app, i) => ( // <--- CRASHES HERE
-      <span key={i}>{app}</span>
-    ))}
+   {product.applications.map((app) => (
+  <div key={app.title} className="application-card">
+    <Image
+      src={app.image}
+      alt={app.title}
+      width={200}
+      height={200}
+      className="rounded-lg"
+    />
+    <p>{app.title}</p>
+  </div>
+))}
   </div>
 </div>
           </div>
