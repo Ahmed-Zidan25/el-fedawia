@@ -17,6 +17,7 @@ import Footer from '@/components/footer'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useParams, usePathname } from 'next/navigation'
 
 const productDetails = {
   'calcium-carbonate': {
@@ -149,13 +150,16 @@ function BenefitItem({ benefit }: { benefit: any }) {
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
   // Normalize slug
-  const rawSlug = (params as any)?.slug
-  const decoded = decodeURIComponent(Array.isArray(rawSlug) ? rawSlug[0] : rawSlug || '')
-  const slug = decoded
-    .trim()
-    .toLowerCase()
-    .replace(/[_\s]+/g, '-')
-    .replace(/-+/g, '-')
+ const urlParams = useParams<{ slug?: string }>()
+const pathname = usePathname()
+
+const rawSlug = urlParams?.slug ?? ''  // <-- comes from URL
+const decoded = decodeURIComponent(rawSlug)
+const slug = decoded
+  .trim()
+  .toLowerCase()
+  .replace(/[_\s]+/g, '-')
+  .replace(/-+/g, '-')
 
   // Lookup + fallback
   let product: any = (productDetails as any)[slug]
@@ -179,7 +183,12 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         <Link href="/featured" className="text-red-600 flex items-center gap-2">
           <ArrowLeft size={20} /> Back
         </Link>
-        <p className="mt-3 text-sm text-slate-500">slug: <span className="font-mono">{slug}</span></p>
+        <p className="mt-3 text-sm text-slate-500">
+  pathname: <span className="font-mono">{pathname}</span>
+</p>
+<p className="text-sm text-slate-500">
+  slug: <span className="font-mono">{slug}</span>
+</p>
       </div>
     )
   }
