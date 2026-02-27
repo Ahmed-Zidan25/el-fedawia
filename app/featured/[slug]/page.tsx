@@ -63,7 +63,15 @@ const productDetails = {
     description: 'Surface-Treated Calcium Carbonate (CGCC).',
     longContent:
       'Our flagship Processed Grade, treated with Stearic Acid to transform the mineral from hydrophilic to hydrophobic. This grade is specifically designed for:',
-    benefits: [
+     applications: [
+      { title: 'Color Masterbatch', image: '/applications/color-masterbatch.png' },
+      { title: 'Filler Masterbatch', image: '/applications/filler-masterbatch.png' },
+      { title: 'Pipes & Fittings', image: '/applications/pipes-fittings.png' },
+      { title: 'PVC Cables', image: '/applications/pvc-cables.png' },
+      { title: 'PVC Sheets', image: '/applications/pvc-sheets.png' },
+      { title: 'Rubber', image: '/applications/rubber.png' }
+    ],
+      benefits: [
       { title: 'Plastics & PVC', text: 'Improved bonding with polymer resins.' },
       { title: 'Optimized Processing', text: 'Lower plasticizer absorption and reduced machine wear.' },
       { title: 'Superior Dispersion', text: 'Prevention of particle agglomeration in non-polar systems.' },
@@ -78,13 +86,12 @@ const productDetails = {
     longContent:
       'Elfedawia Co. is uniquely positioned with access to high-quality talc reserves in Egypt, enabling us to supply consistent, pure, and reliable talc products to global markets at a time when premium resources are becoming increasingly scarce worldwide. <br /><br /> The performance of talc depends on its particle size distribution and particle shape. At Elfedawia Co., we apply advanced milling and classification techniques to produce talc with uniform particle sizes, optimized PSD curves, and excellent dispersion characteristics—ensuring dependable results in every application. <br /><br /> Our FD Talc product range is manufactured from carefully selected, high-purity deposits with controlled mineral content. We also offer special high–aspect-ratio talc grades, developed for advanced and high-performance applications requiring precision and consistency.',
     benefits: [
-      { title: 'Paper & Packaging' },
-      { title: 'Paints & Coatings' },
-      { title: 'Plastics & Polymers' },
-      { title: 'Polyester Putties' },
-      { title: 'Adhesives & Sealants' },
-      { title: 'Cosmetics & Personal Care' },
-      { title: 'Ceramics' },
+      { title: 'Agricultural Pesticides', image: '/applications/agricultural-pesticides.png'},
+      { title: 'Home Pestisides', image: '/applications/talc-petisides.png'},
+      { title: 'Soup', image: '/applications/talc-soup.png' },
+      { title: 'Paints', image: '/applications/talc-paints.png' },
+      { title: 'Rubber', image: '/applications/talc-application2.png' }
+    
     ],
     tdsUrl: '/pdfs/Talc.pdf',
   },
@@ -94,7 +101,13 @@ const productDetails = {
     description: 'Ground Limestone (Calcium Carbonate) – Industrial Applications.',
     longContent:
       'Ground limestone, also known as calcium carbonate (CaCO₃), is one of the most widely used industrial minerals worldwide. Produced by crushing and grinding high-quality limestone into controlled millimeter-sized particles, this versatile material plays a vital role in a wide range of manufacturing and construction sectors. Due to its high purity, excellent whiteness, cost-effectiveness, and chemical stability, ground limestone is a preferred raw material for many industries.',
-    benefits: [
+    applications: [
+      { title: 'Poultry Feed', image: '/applications/limestone1.png' },
+      { title: 'Glass', image: '/applications/limestone3.png' },
+      { title: 'Ground Limestone', image: '/applications/limestone4.png' },
+      { title: 'Impurity Removal', image: '/applications/limestone5.png' }
+     ],
+      benefits: [
       {
         title: 'Cement and Construction Materials',
         text: 'Ground limestone is an essential component in the cement industry. It is used both as a raw feed material and as a mineral additive to improve workability and reduce production costs. It also contributes to enhanced strength and durability in construction products.',
@@ -246,7 +259,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             <div className="mb-16">
               <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white flex items-center gap-3">
                 <span className="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm">
-                  00
+                  01
                 </span>
                 Overview
               </h2>
@@ -261,7 +274,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white flex items-center gap-3">
               <span className="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm">
-                01
+                02
               </span>
               Primary Applications
             </h2>
@@ -311,7 +324,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white flex items-center gap-3">
               <span className="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm">
-                02
+                03
               </span>
               Key Strategic Benefits
             </h2>

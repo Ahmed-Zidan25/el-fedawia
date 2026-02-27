@@ -9,7 +9,7 @@ const featuredProducts = [
     id: 1,
     name: 'Calcium Carbonate',
     subtitle: 'Natural Grade',
-    image: 'images/cac03 powder.webp',
+    image: 'images/cac03-powder.webp',
     description: 'Pure natural calcium carbonate for diverse industrial applications',
     features: [
       'High whiteness (96-98%)',
@@ -24,7 +24,7 @@ const featuredProducts = [
     id: 2,
     name: 'Coated calcium carbonate',
     subtitle: 'Advanced Coated Grade',
-    image: 'images/CaCo3 coated.png',
+    image: 'images/caco3-coated.png',
     description: 'Surface-treated calcium carbonate with advanced dispersion properties',
     features: [
       'Advanced dispersion coating',
@@ -39,7 +39,7 @@ const featuredProducts = [
     id: 3,
     name: 'Talc Powder',
     subtitle: 'Multi-Grade Selection',
-    image: '/featured-talc-powder.jpg',
+    image: '/images/talc.png',
     description: 'Premium talc powder with multiple micron grades for specialized applications',
     features: [
       'Multiple grade options',
@@ -54,7 +54,7 @@ const featuredProducts = [
     id: 4,
     name: 'Limestone',
     subtitle: 'Industrial Grade',
-    image: '/featured-limestone.jpg',
+    image: '/images/caco3-limistone.webp',
     description: 'High-purity sedimentary rock essential for construction and chemical processes',
     features: [
       'High CaCO3 content',
@@ -82,7 +82,7 @@ const featuredProducts = [
     id: 6,
     name: 'Rock Phosphate Powder',
     subtitle: 'Natural Fertilizer',
-    image: '/featured-phosphate.jpg',
+    image: '/images/phosphate.jpeg',
     description: 'Organic phosphorus source for long-term soil fertility and plant growth',
     features: [
       'High P2O5 concentration',
@@ -96,7 +96,7 @@ const featuredProducts = [
     id: 7,
     name: 'Kaolin',
     subtitle: 'Refined White Clay',
-    image: '/featured-kaolin.jpg',
+    image: '/images/kaolin.jpeg',
     description: 'Soft white clay widely used in ceramics, paper, and paint industries',
     features: [
       'Exceptional brightness',
