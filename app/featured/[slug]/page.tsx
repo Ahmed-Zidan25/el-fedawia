@@ -9,37 +9,60 @@ import Link from 'next/link';
 
 
 const productDetails = {
-  "calcium-carbonate": {
-    name: "Calcium Carbonate (CaCO3)",
-    description: "Calcium Carbonate (CaCO3) | High-Performance Mineral Solutions.",
-    longContent: "Calcium Carbonate is the world’s most versatile and abundant mineral, sourced from our high-purity deposits of limestone and marble. With a Mohs hardness of approximately 3, it serves as the most efficient, soft, and easy-to-process functional filler in the industry. As a leading manufacturer, we provide essential solutions for paint formulations and allied industries. Our products are engineered to enhance chemical inertness, ensure high whiteness, and optimize production economics through superior dispersibility.",
-    applications: [
-      {
-    title: "Calcium Nitrate Fertilizers",
-    image: "/applications/Calcium nitrate fertilizers.png"
-  },
-       {
-    title: "Gypsum Boards",
-    image: "/applications/gypsum boards.png"
-  },
-   {
-    title: "Paints & Coatings",
-    image: "/applications/PAINTS & COATING.png"
-  },
-   {
-    title: "Paper",
-    image: "/applications/PAPER.png"
-  },]
-    benefits: [
-      {title: "Superior Whiteness & Brightness", text: "Provides a clean, neutral white base for high-quality coatings and paper products."},
-      {title: "Cost Optimization", text: "Enables the partial replacement of expensive pigments like Titanium Dioxide (TiO_2), significantly reducing total formulation costs without compromising opacity."},
-      {title: "Advanced Rheology & Film Integrity", text: "Improves viscosity control and enhances the mechanical strength and application characteristics of the coating film."},
-      {title: "Enhanced Durability", text: "Increases abrasion and wear resistance, ensuring the longevity of the finished surface."},
-      {title: "Eco-Friendly & Safe", text: "A non-hazardous, sustainable mineral compatible with strictly regulated environmental standards."},
-      {title: "Broad Chemical Compatibility", text: "Resists efflorescence in waterborne systems and integrates seamlessly with various binder chemistries."}
-    ],
-    tdsUrl: "/pdfs/Calcium-Carbonate.pdf"
-  },
+ "calcium-carbonate": {
+  name: "Calcium Carbonate (CaCO3)",
+  description: "Calcium Carbonate (CaCO3) | High-Performance Mineral Solutions.",
+  longContent:
+    "Calcium Carbonate is the world’s most versatile and abundant mineral, sourced from our high-purity deposits of limestone and marble. With a Mohs hardness of approximately 3, it serves as the most efficient, soft, and easy-to-process functional filler in the industry. As a leading manufacturer, we provide essential solutions for paint formulations and allied industries. Our products are engineered to enhance chemical inertness, ensure high whiteness, and optimize production economics through superior dispersibility.",
+
+  applications: [
+    {
+      title: "Calcium Nitrate Fertilizers",
+      image: "/applications/Calcium nitrate fertilizers.png",
+    },
+    {
+      title: "Gypsum Boards",
+      image: "/applications/gypsum boards.png",
+    },
+    {
+      title: "Paints & Coatings",
+      image: "/applications/PAINTS & COATING.png",
+    },
+    {
+      title: "Paper",
+      image: "/applications/PAPER.png",
+    },
+  ],   // ✅ comma added here
+
+  benefits: [
+    {
+      title: "Superior Whiteness & Brightness",
+      text: "Provides a clean, neutral white base for high-quality coatings and paper products.",
+    },
+    {
+      title: "Cost Optimization",
+      text: "Enables the partial replacement of expensive pigments like Titanium Dioxide (TiO_2), significantly reducing total formulation costs without compromising opacity.",
+    },
+    {
+      title: "Advanced Rheology & Film Integrity",
+      text: "Improves viscosity control and enhances the mechanical strength and application characteristics of the coating film.",
+    },
+    {
+      title: "Enhanced Durability",
+      text: "Increases abrasion and wear resistance, ensuring the longevity of the finished surface.",
+    },
+    {
+      title: "Eco-Friendly & Safe",
+      text: "A non-hazardous, sustainable mineral compatible with strictly regulated environmental standards.",
+    },
+    {
+      title: "Broad Chemical Compatibility",
+      text: "Resists efflorescence in waterborne systems and integrates seamlessly with various binder chemistries.",
+    },
+  ],
+
+  tdsUrl: "/pdfs/Calcium-Carbonate.pdf",
+},
   "coated-calcium-carbonate": {
     name: "Coated Calcium Carbonate",
     description: "Surface-Treated Calcium Carbonate (CGCC).",
