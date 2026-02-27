@@ -28,7 +28,7 @@ const productDetails = {
     applications: [
       { title: 'Calcium Nitrate Fertilizers', image: '/applications/calcium-nitrate-fertilizers.png' },
       { title: 'Gypsum Boards', image: '/applications/gypsum-boards.png' },
-      { title: 'Paints & Coatings', image: '/applications/paints-coatings.png' },
+      { title: 'Paints and Coatings', image: '/applications/paints-coatings.png' },
       { title: 'Paper', image: '/applications/paper.png' },
     ],
     benefits: [
@@ -256,10 +256,10 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-red-600/5 blur-[100px] -z-10" />
               <Layers size={180} className="text-red-600/20 absolute rotate-12" />
-              <div className="relative z-10 text-center">
+              {/* <div className="relative z-10 text-center">
                 <span className="text-red-600 font-bold text-xl uppercase tracking-widest block mb-2">Industrial Grade</span>
                 <div className="h-1 w-12 bg-red-600 mx-auto rounded-full" />
-              </div>
+              </div> */}
             </motion.div>
           </div>
 
