@@ -171,10 +171,16 @@ const slug = decoded
     if (matchedKey) product = (productDetails as any)[matchedKey]
   }
 
-  // Hydration guard
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
-  if (!mounted) return null
+const [mounted, setMounted] = useState(false)
+useEffect(() => setMounted(true), [])
+
+const applications = useMemo(() => {
+  const raw = product?.applications
+  return Array.isArray(raw) ? raw : []
+}, [product])
+
+if (!mounted) return null
+
 
   if (!product) {
     return (
@@ -193,7 +199,7 @@ const slug = decoded
     )
   }
 
-  const applications = useMemo(() => (Array.isArray(product?.applications) ? product.applications : []), [product])
+ const applications = Array.isArray(product?.applications) ? product.applications : []
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col">
