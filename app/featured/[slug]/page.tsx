@@ -24,10 +24,10 @@ const productDetails = {
     longContent:
       'Calcium Carbonate is the world’s most versatile and abundant mineral, sourced from our high-purity deposits of limestone and marble. With a Mohs hardness of approximately 3, it serves as the most efficient, soft, and easy-to-process functional filler in the industry. As a leading manufacturer, we provide essential solutions for paint formulations and allied industries. Our products are engineered to enhance chemical inertness, ensure high whiteness, and optimize production economics through superior dispersibility.',
     applications: [
-      { title: 'Calcium Nitrate Fertilizers', image: '/applications/calcium-nitrate-fertilizers.png' },
+      { title: 'Calcium Nitrate Fertilizers', image: '/applications/calciumnitratefertilizers.png' },
       { title: 'Gypsum Boards', image: '/applications/gypsum-boards.png' },
       { title: 'Paints & Coatings', image: '/applications/paints-coatings.png' },
-      { title: 'Paper', image: '/applications/paper.png' },
+      { title: 'Paper', image: '/applications/paper1.png' },
     ],
     benefits: [
       {
@@ -85,12 +85,19 @@ const productDetails = {
       'Talc is one of the most versatile industrial minerals, valued for its exceptional softness, hydrophobic nature, and chemical stability. It enhances product quality, improves processing efficiency, and delivers reliable performance across a wide range of applications.',
     longContent:
       'Elfedawia Co. is uniquely positioned with access to high-quality talc reserves in Egypt, enabling us to supply consistent, pure, and reliable talc products to global markets at a time when premium resources are becoming increasingly scarce worldwide. <br /><br /> The performance of talc depends on its particle size distribution and particle shape. At Elfedawia Co., we apply advanced milling and classification techniques to produce talc with uniform particle sizes, optimized PSD curves, and excellent dispersion characteristics—ensuring dependable results in every application. <br /><br /> Our FD Talc product range is manufactured from carefully selected, high-purity deposits with controlled mineral content. We also offer special high–aspect-ratio talc grades, developed for advanced and high-performance applications requiring precision and consistency.',
-    benefits: [
+   applications: [
       { title: 'Agricultural Pesticides', image: '/applications/agricultural-pesticides.png'},
       { title: 'Home Pestisides', image: '/applications/talc-petisides.png'},
-      { title: 'Soup', image: '/applications/talc-soup.png' },
+      { title: 'Soap', image: '/applications/talc-soup.png' },
       { title: 'Paints', image: '/applications/talc-paints.png' },
       { title: 'Rubber', image: '/applications/talc-application2.png' }
+    ],
+      benefits: [
+      { title: 'Paints', text: 'Talc powder is considered one of the essential filler materials in the paint and coatings industry, playing a key role in enhancing the technical performance of the final product while also reducing overall production costs. Talc is composed of hydrated magnesium silicate and is characterized by its fine particle size, chemical stability, and ability to improve coating properties.'},
+      { title: 'Agricultural Pesticides', text: 'Talc is an important material used in the manufacturing of agricultural pesticides, where it serves as a carrier and diluent for active ingredients in various formulations. Talc is characterized by its fine particle size and chemical stability, making it suitable for agricultural applications without affecting the effectiveness of the active substance.'},
+      { title: 'Household Insecticide', text: 'Talc is used in the production of certain types of household insecticides, particularly in powder formulations and dry baits, where it functions as a carrier and diluent for active ingredients. Talc is characterized by its fine particle size and chemical stability, making it suitable for indoor residential environments when used in accordance with safety standards.' },
+      { title: ' Bar Soap ', text: 'Ground talc is used in certain types of bar soap due to its fine texture and chemical stability. It is added in controlled amounts to improve the consistency of the soap bar and increase its hardness, helping it maintain its shape for a longer period during use and storage.' }
+     
     
     ],
     tdsUrl: '/pdfs/Talc.pdf',
