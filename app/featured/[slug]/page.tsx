@@ -351,7 +351,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
   {/* ... */}
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     {product.applications.map((app, i) => ( // <--- CRASHES HERE
-      <span key={i} ...>{app}</span>
+      <span key={i}>{app}</span>
     ))}
   </div>
 </div>
