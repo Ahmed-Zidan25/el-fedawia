@@ -173,7 +173,7 @@ const productDetails = {
     ],
     tdsUrl: '/pdfs/gypsum.pdf',
   },
- Phosphate: {
+ 'rock-phosphate-powder': {
     name: 'Rock Phosphate Powder',
     description: 'High-grade Phosphorous source for Fertilizer & Chemical industries.',
     longContent:
