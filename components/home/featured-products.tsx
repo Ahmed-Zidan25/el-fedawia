@@ -22,7 +22,7 @@ const featuredProducts = [
   },
   {
     id: 2,
-    name: 'Coated calcium carbonate',
+    name: 'Coated Calcium Carbonate',
     subtitle: 'Advanced Coated Grade',
     image: 'images/caco3-coated.png',
     description: 'Surface-treated calcium carbonate with advanced dispersion properties',

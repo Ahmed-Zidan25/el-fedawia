@@ -122,6 +122,49 @@ const productDetails = {
     ],
     tdsUrl: '/pdfs/Limestone.pdf',
   },
+  Agricultural Gypsum: {
+    name: 'Agricultural Gypsum',
+    description: 'Natural mineral used to improve soil structure and provide essential nutrients',
+    longContent:
+      'Agricultural gypsum is one of the most important natural soil amendments used by farmers to improve soil quality and increase crop productivity—especially in saline, sodic, and heavy clay soils.',
+      'It is a natural material composed mainly of calcium sulfate dihydrate (CaSO₄·2H₂O). It is widely used to improve soil structure, reduce salinity and sodicity problems, and enhance overall soil fertility.',
+      'Provides multiple benefits that make it one of the most effective soil conditioners.',
+    applications: [
+      { title: 'Fertilizers', image: '/featured-gypsum.jpg' }
+     
+     ],
+      benefits: [
+      {
+        title: 'Reduces Soil Salinity and Sodicity',
+        text: 'Gypsum helps replace excess sodium (Na) in the soil with calcium, which:',
+        subItems: [
+'Reduces soil alkalinity',
+'Improves soil fertility',
+'Enhances root nutrient uptake',
+'Promotes healthier plant growth']
+},
+  { title: 'Improves Soil Structure',
+        text: 'In heavy clay soils, gypsum',
+        subItems: [  
+'Breaks up compacted soil',
+'Improves soil aeration',
+'Enhances water infiltration and drainage',
+'Prevents surface crusting'
+],
+  },
+  { title: 'Increases Crop Productivity',
+        text: 'By improving soil conditions, plants can absorb nutrients more efficiently, resulting in:',
+        subItems: [  
+'Stronger root systems',
+'Higher yield',
+'Better crop quality'
+],
+  },
+  { title: 'Enhances Water and Fertilizer Efficiency',
+        text: 'Gypsum improves irrigation efficiency and increases the effectiveness of applied fertilizers'
+       }
+     tdsUrl: '/pdfs/gypsum.pdf',
+  },
 } as const
 
 function BenefitItem({ benefit }: { benefit: any }) {
