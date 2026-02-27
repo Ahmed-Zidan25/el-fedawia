@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   Download,
   CheckCircle2,
@@ -123,12 +123,17 @@ function BenefitItem({ benefit }: { benefit: any }) {
           <CheckCircle2 className="text-red-600 shrink-0" size={18} />
           <span className="text-slate-900 dark:text-white font-bold text-base">{title}</span>
         </div>
-        {description ? (isOpen ? <ChevronUp className="text-slate-400" size={20} /> : <ChevronDown className="text-slate-400" size={20} />) : null}
+        {description ? isOpen ? <ChevronUp className="text-slate-400" size={20} /> : <ChevronDown className="text-slate-400" size={20} /> : null}
       </button>
 
       <AnimatePresence>
         {isOpen && description && (
-          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }}>
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
             <div className="px-5 pb-5 pt-0 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
               <div className="pl-8 border-l-2 border-red-100 dark:border-red-900/30">
                 <p className="mb-3">{description}</p>
@@ -149,17 +154,26 @@ function BenefitItem({ benefit }: { benefit: any }) {
 }
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  // Normalize slug
- const urlParams = useParams<{ slug?: string }>()
-const pathname = usePathname()
+  // Prefer URL params (works even if props params are missing due to rewrites)
+  const urlParams = useParams<{ slug?: string | string[] }>()
+  const pathname = usePathname()
 
-const rawSlug = urlParams?.slug ?? ''  // <-- comes from URL
-const decoded = decodeURIComponent(rawSlug)
-const slug = decoded
-  .trim()
-  .toLowerCase()
-  .replace(/[_\s]+/g, '-')
-  .replace(/-+/g, '-')
+  const rawSlug = urlParams?.slug ?? params?.slug ?? ''
+  const raw = Array.isArray(rawSlug) ? rawSlug[0] : rawSlug
+
+  // Safe decode
+  let decoded = raw
+  try {
+    decoded = decodeURIComponent(raw)
+  } catch {
+    decoded = raw
+  }
+
+  const slug = decoded
+    .trim()
+    .toLowerCase()
+    .replace(/[_\s]+/g, '-')
+    .replace(/-+/g, '-')
 
   // Lookup + fallback
   let product: any = (productDetails as any)[slug]
@@ -171,16 +185,10 @@ const slug = decoded
     if (matchedKey) product = (productDetails as any)[matchedKey]
   }
 
-const [mounted, setMounted] = useState(false)
-useEffect(() => setMounted(true), [])
-
-const applications = useMemo(() => {
-  const raw = product?.applications
-  return Array.isArray(raw) ? raw : []
-}, [product])
-
-if (!mounted) return null
-
+  // Hydration guard (hooks remain consistent)
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  if (!mounted) return null
 
   if (!product) {
     return (
@@ -189,17 +197,20 @@ if (!mounted) return null
         <Link href="/featured" className="text-red-600 flex items-center gap-2">
           <ArrowLeft size={20} /> Back
         </Link>
+
+        {/* Debug */}
         <p className="mt-3 text-sm text-slate-500">
-  pathname: <span className="font-mono">{pathname}</span>
-</p>
-<p className="text-sm text-slate-500">
-  slug: <span className="font-mono">{slug}</span>
-</p>
+          pathname: <span className="font-mono">{pathname}</span>
+        </p>
+        <p className="text-sm text-slate-500">
+          slug: <span className="font-mono">{slug || '(empty)'}</span>
+        </p>
       </div>
     )
   }
 
- const applications = Array.isArray(product?.applications) ? product.applications : []
+  // ✅ No hook here (prevents React error #310)
+  const applications = Array.isArray(product?.applications) ? product.applications : []
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col">
@@ -218,19 +229,31 @@ if (!mounted) return null
                 {product.name}
               </h1>
               <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">{product.description}</p>
+
               <div className="flex flex-wrap gap-4">
-                <a href="#quote" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-red-600/20 flex items-center gap-2">
+                <a
+                  href="#quote"
+                  className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-red-600/20 flex items-center gap-2"
+                >
                   <MessageSquare size={20} /> Request Quote
                 </a>
+
                 {product.tdsUrl ? (
-                  <a href={product.tdsUrl} className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-8 py-4 rounded-xl font-bold transition-all border border-slate-200 dark:border-slate-800 flex items-center gap-2 hover:border-red-300 dark:hover:border-red-900">
+                  <a
+                    href={product.tdsUrl}
+                    className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-8 py-4 rounded-xl font-bold transition-all border border-slate-200 dark:border-slate-800 flex items-center gap-2 hover:border-red-300 dark:hover:border-red-900"
+                  >
                     <Download size={20} /> Download TDS
                   </a>
                 ) : null}
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="relative aspect-square bg-white dark:bg-slate-900 rounded-[3rem] p-12 border border-slate-200 dark:border-slate-800 shadow-2xl flex items-center justify-center overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="relative aspect-square bg-white dark:bg-slate-900 rounded-[3rem] p-12 border border-slate-200 dark:border-slate-800 shadow-2xl flex items-center justify-center overflow-hidden"
+            >
               <div className="absolute top-0 right-0 w-64 h-64 bg-red-600/5 blur-[100px] -z-10" />
               <Layers size={180} className="text-red-600/20 absolute rotate-12" />
               <div className="relative z-10 text-center">
@@ -256,7 +279,10 @@ if (!mounted) return null
                   const image = isString ? undefined : app?.image
 
                   return (
-                    <div key={`${title}-${idx}`} className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-sm hover:shadow-md transition-all">
+                    <div
+                      key={`${title}-${idx}`}
+                      className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-sm hover:shadow-md transition-all"
+                    >
                       {image ? (
                         <div className="relative w-full aspect-square overflow-hidden rounded-xl mb-3 bg-slate-50 dark:bg-slate-800">
                           <Image src={image} alt={title} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
@@ -280,7 +306,9 @@ if (!mounted) return null
               Key Strategic Benefits
             </h2>
             <div className="flex flex-col gap-4">
-              {Array.isArray(product.benefits) ? product.benefits.map((benefit: any, i: number) => <BenefitItem key={i} benefit={benefit} />) : null}
+              {Array.isArray(product.benefits)
+                ? product.benefits.map((benefit: any, i: number) => <BenefitItem key={i} benefit={benefit} />)
+                : null}
             </div>
           </div>
 
