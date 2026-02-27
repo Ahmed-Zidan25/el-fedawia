@@ -1,11 +1,12 @@
 'use client'
 
-import { useState, use, useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Download, CheckCircle2, FileText, ChevronRight, MessageSquare, ChevronDown, ChevronUp, Layers, ArrowLeft } from "lucide-react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const productDetails = {
