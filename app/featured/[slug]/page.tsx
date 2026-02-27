@@ -2,11 +2,9 @@
 
 import { useEffect, useState } from 'react'
 import {
-  Download,
   CheckCircle2,
   FileText,
   ChevronRight,
-  MessageSquare,
   ChevronDown,
   ChevronUp,
   Layers,
@@ -28,7 +26,7 @@ const productDetails = {
     applications: [
       { title: 'Calcium Nitrate Fertilizers', image: '/applications/calcium-nitrate-fertilizers.png' },
       { title: 'Gypsum Boards', image: '/applications/gypsum-boards.png' },
-      { title: 'Paints and Coatings', image: '/applications/paints-coatings.png' },
+      { title: 'Paints & Coatings', image: '/applications/paints-coatings.png' },
       { title: 'Paper', image: '/applications/paper.png' },
     ],
     benefits: [
@@ -123,7 +121,13 @@ function BenefitItem({ benefit }: { benefit: any }) {
           <CheckCircle2 className="text-red-600 shrink-0" size={18} />
           <span className="text-slate-900 dark:text-white font-bold text-base">{title}</span>
         </div>
-        {description ? isOpen ? <ChevronUp className="text-slate-400" size={20} /> : <ChevronDown className="text-slate-400" size={20} /> : null}
+        {description ? (
+          isOpen ? (
+            <ChevronUp className="text-slate-400" size={20} />
+          ) : (
+            <ChevronDown className="text-slate-400" size={20} />
+          )
+        ) : null}
       </button>
 
       <AnimatePresence>
@@ -217,60 +221,55 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       <Header />
 
       <main className="flex-grow pt-32 pb-20 px-4 md:px-8">
-        <div className="max-w-5xl mx-auto">
-          <Link href="/featured" className="inline-flex items-center gap-2 text-slate-500 hover:text-red-600 transition-colors mb-8 group">
+        <div className="max-w-3xl mx-auto">
+          {/* Back */}
+          <Link
+            href="/featured"
+            className="inline-flex items-center gap-2 text-slate-500 hover:text-red-600 transition-colors mb-8 group"
+          >
             <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
             <span className="font-medium">Back</span>
           </Link>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
-                {product.name}
-              </h1>
-              <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">{product.description}</p>
+          {/* HERO (single column, no right box, no top buttons) */}
+          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4 leading-tight">
+              {product.name}
+            </h1>
+            <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+              {product.description}
+            </p>
+          </motion.div>
 
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="#quote"
-                  className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-red-600/20 flex items-center gap-2"
-                >
-                  <MessageSquare size={20} /> Request Quote
-                </a>
+          {/* Overview */}
+          {product.longContent ? (
+            <div className="mb-16">
+              <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white flex items-center gap-3">
+                <span className="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm">
+                  00
+                </span>
+                Overview
+              </h2>
+              <div
+                className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 md:p-8 text-slate-700 dark:text-slate-300 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: product.longContent }}
+              />
+            </div>
+          ) : null}
 
-                {product.tdsUrl ? (
-                  <a
-                    href={product.tdsUrl}
-                    className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-8 py-4 rounded-xl font-bold transition-all border border-slate-200 dark:border-slate-800 flex items-center gap-2 hover:border-red-300 dark:hover:border-red-900"
-                  >
-                    <Download size={20} /> Download TDS
-                  </a>
-                ) : null}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="relative aspect-square bg-white dark:bg-slate-900 rounded-[3rem] p-12 border border-slate-200 dark:border-slate-800 shadow-2xl flex items-center justify-center overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-red-600/5 blur-[100px] -z-10" />
-              <Layers size={180} className="text-red-600/20 absolute rotate-12" />
-              {/* <div className="relative z-10 text-center">
-                <span className="text-red-600 font-bold text-xl uppercase tracking-widest block mb-2">Industrial Grade</span>
-                <div className="h-1 w-12 bg-red-600 mx-auto rounded-full" />
-              </div> */}
-            </motion.div>
-          </div>
-
+          {/* Applications */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white flex items-center gap-3">
-              <span className="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm">01</span>
+              <span className="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm">
+                01
+              </span>
               Primary Applications
             </h2>
 
             {applications.length === 0 ? (
-              <div className="text-slate-600 dark:text-slate-400">No applications listed for this product.</div>
+              <div className="text-slate-600 dark:text-slate-400">
+                No applications listed for this product.
+              </div>
             ) : (
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {applications.map((app: any, idx: number) => {
@@ -285,14 +284,22 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                     >
                       {image ? (
                         <div className="relative w-full aspect-square overflow-hidden rounded-xl mb-3 bg-slate-50 dark:bg-slate-800">
-                          <Image src={image} alt={title} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
+                          <Image
+                            src={image}
+                            alt={title}
+                            fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                            className="object-cover"
+                          />
                         </div>
                       ) : (
                         <div className="w-full aspect-square rounded-xl mb-3 bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-400">
                           <Layers size={42} />
                         </div>
                       )}
-                      <p className="text-slate-900 dark:text-white font-semibold text-sm leading-snug">{title}</p>
+                      <p className="text-slate-900 dark:text-white font-semibold text-sm leading-snug">
+                        {title}
+                      </p>
                     </div>
                   )
                 })}
@@ -300,30 +307,45 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             )}
           </div>
 
+          {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white flex items-center gap-3">
-              <span className="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm">02</span>
+              <span className="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm">
+                02
+              </span>
               Key Strategic Benefits
             </h2>
             <div className="flex flex-col gap-4">
               {Array.isArray(product.benefits)
-                ? product.benefits.map((benefit: any, i: number) => <BenefitItem key={i} benefit={benefit} />)
+                ? product.benefits.map((benefit: any, i: number) => (
+                    <BenefitItem key={i} benefit={benefit} />
+                  ))
                 : null}
             </div>
           </div>
 
-          <div id="quote" className="bg-red-600 rounded-[2.5rem] p-8 md:p-12 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
+          {/* CTA (kept as bottom resources section) */}
+          <div
+            id="quote"
+            className="bg-red-600 rounded-[2.5rem] p-8 md:p-12 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8"
+          >
             <div>
               <h2 className="text-2xl font-bold mb-2">Technical Resources</h2>
               <p className="text-red-50 opacity-90">Download specifications or request commercial pricing.</p>
             </div>
             <div className="flex flex-wrap gap-4">
               {product.tdsUrl ? (
-                <a href={product.tdsUrl} className="flex items-center gap-2 bg-white/10 px-6 py-3 rounded-xl font-bold border border-white/20 hover:bg-white/20 transition-all">
+                <a
+                  href={product.tdsUrl}
+                  className="flex items-center gap-2 bg-white/10 px-6 py-3 rounded-xl font-bold border border-white/20 hover:bg-white/20 transition-all"
+                >
                   <FileText size={20} /> TDS
                 </a>
               ) : null}
-              <Link href="/get-quote" className="flex items-center gap-2 bg-white text-red-600 px-6 py-3 rounded-xl font-bold hover:bg-red-50 transition-all">
+              <Link
+                href="/get-quote"
+                className="flex items-center gap-2 bg-white text-red-600 px-6 py-3 rounded-xl font-bold hover:bg-red-50 transition-all"
+              >
                 Get Quote <ChevronRight size={20} />
               </Link>
             </div>
