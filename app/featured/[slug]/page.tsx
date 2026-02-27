@@ -346,13 +346,15 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
               <span className="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm">01</span>
               Primary Applications
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {product.applications.map((app, i) => (
-                <span key={i} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-2xl text-center font-bold text-slate-700 dark:text-slate-300 shadow-sm">
-                  {app}
-                </span>
-              ))}
-            </div>
+            {/* Applications Grid */}
+<div className="mb-16">
+  {/* ... */}
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {product.applications.map((app, i) => ( // <--- CRASHES HERE
+      <span key={i} ...>{app}</span>
+    ))}
+  </div>
+</div>
           </div>
 
           {/* Strategic Benefits */}
